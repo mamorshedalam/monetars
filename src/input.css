@@ -3,22 +3,25 @@
 @tailwind utilities;
 
 @layer components {
-     .container {
-       @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] px-4 mx-auto;
-     }
+  .container {
+    @apply w-full sm:w-[540px] md:w-[720px] lg:w-[960px] xl:w-[1140px] px-4 mx-auto;
+  }
 }
 
 @layer base {
-     body {
-       @apply dm_font;
-     }
-     a {
-       @apply inline-block;
-     }
+  body {
+    @apply roboto_font text-base text-neutral-800;
+  }
+  a {
+    @apply inline-block;
+  }
+  button {
+    @apply cursor-pointer rounded-md;
+  }
 }
 
 @layer utilities {
-     .dm_font {
-       font-family: "DM Sans", sans-serif;
-     }
+  .roboto_font {
+    font-family: "Roboto", sans-serif;
+  }
 }
