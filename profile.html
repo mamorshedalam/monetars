@@ -1,0 +1,2204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Monetars">
+    <meta name="author" content="Monetars">
+    <meta name="generator" content="">
+    <!--  Favicons-->
+    <title>Monetars - Profile</title>
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+    <!-- Slick CSS-->
+    <link rel="stylesheet" href="assets/slick/slick.css">
+    <link rel="stylesheet" href="assets/slick/slick-theme.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWINDCSS OUTPUT -->
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header Starts-->
+    <header class="sticky top-0 z-50">
+        <nav class="relative md:flex hidden justify-between items-center flex-wrap py-2 px-2 bg-white shadow-md">
+            <a class="pt-1 pb-1 mr-4 text-xl whitespace-nowrap" href="index.html">
+                <img src="assets/img/Monester-Logo.png" alt="Monster Logo" style="width:200px; height: 50px">
+            </a>
+            <button onclick="displayToggle(dropdownMenu3)" class="xl:hidden block py-1 px-3 text-xl">
+                <span class="flex w-6 h-6 align-middle justify-center items-center ">
+                    <i class="fal fa-align-right text-blue-800"></i>
+                </span>
+            </button>
+            <div class="xl:flex hidden xl:basis-auto basis-full grow items-center" id="dropdownMenu3">
+                <ul class="flex xl:flex-row flex-col mx-auto lg:mb-0 mb-2 ">
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" aria-current="page"
+                            href="earn.html">
+                            <i class="fal fa-dollar-sign px-2"></i>Earn
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="withdraw.html">
+                            <i class="fal fa-credit-card-front px-2"></i>Withdraw
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="leaders.html">
+                            <i class="fal fa-star px-2"></i>Leaders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
+                            <i class="fal fa-gift px-2"></i>Promo
+                        </a>
+                    </li>
+                </ul>
+                <div class="my-1">
+                    <span class="py-1 px-2 text-sm rounded-xl text-neutral-500 bg-indigo-200">
+                        0 <i class="fal fa-usd-circle ml-1 p-[2px] rounded-[50%] text-white bg-yellow-400"></i>
+                    </span>
+                    <span class="py-1 px-2 mx-3 text-sm rounded-xl text-neutral-500 bg-indigo-200">
+                        0 <i class="fal fa-lock-alt ml-1 p-[2px] rounded-full text-white bg-yellow-400"></i>
+                    </span>
+                </div>
+                <div class="my-1">
+                    <div class="relative">
+                        <button onclick="displayToggle(dropdownMenu1)"
+                            class="flex py-1 px-2 text-sm justify-start items-center bg-indigo-200">
+                            <img class="w-9 h-9" src="assets/img/Ellipse 54.png"><span class="mx-2">MacMa</span><i
+                                class="fal fa-chevron-down"></i>
+                        </button>
+                        <ul style="display: none;"
+                            class="absolute top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50"
+                            style="min-width: 130px !important;" id="dropdownMenu1">
+                            <li><a class="block w-full py-1 px-4 text-sm clear-both whitespace-nowrap text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="profile.html"><i class="fal fa-user-circle mr-2 text-neutral-500"></i>User
+                                    Profile</a>
+                            </li>
+                            <li><a class="block w-full py-1 px-4 text-sm clear-both whitespace-nowrap text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="#"><i class="fal fa-sign-out-alt mr-2 text-neutral-500"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="relative">
+                        <button onclick="displayToggle(dropdownMenu2)"
+                            class="flex justify-center items-center py-1 px-3">
+                            <div>
+                                <img src="assets/img/united-states.png" class="inline-block rounded">
+                            </div>
+                            <div>
+                                <span class="ml-2"><i class="fal fa-chevron-down"
+                                        style="font-size: 10px;font-weight: bold;"></i></span>
+                            </div>
+                        </button>
+                        <ul style="display: none;"
+                            class="absolute w-40 py-2 top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50"
+                            id="dropdownMenu2">
+                            <li><a class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="#">
+                                    <img src="assets/img/united-states.png" class="inline-block rounded"><span
+                                        class="ml-2">United States</span>
+                                </a></li>
+                            <li><a class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="#">
+                                    <img src="assets/img/germany.png" class="inline-block rounded"><span
+                                        class="ml-2">Deutchlld</span>
+                                </a></li>
+                            <li><a class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="#">
+                                    <img src="assets/img/spain.png" class="inline-block rounded"><span
+                                        class="ml-2">Espla</span>
+                                </a></li>
+                            <li><a class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500 hover:bg-blue-800 hover:text-white"
+                                    href="#">
+                                    <img src="assets/img/france.png" class="inline-block rounded"><span
+                                        class="ml-2">Frale</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <button class="inline-block py-1 px-3 text-base text-neutral-800">Login</button>
+                    <button
+                        class="inline-block py-1 px-3 text-base text-white bg-blue-800 hover:bg-blue-900">Register</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="md:hidden flex p-2 bg-white justify-between items-center z-50">
+            <div>
+                <div>
+                    <button onclick="sidebarToggle(sidebarMenu1)" class="relative mx-1 py-1 px-2 text-sm bg-white">
+                        <i class="fal fa-align-left text-xl text-blue-800"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="my-1">
+                    <div class="relative">
+                        <button onclick="displayToggle(dropdownMenu4)"
+                            class="flex justify-start items-center p-1 text-sm bg-indigo-200">
+                            <div>
+                                <span style="border-radius: 3px; background-color: white; padding: 12px 14px;">D</span>
+                            </div>
+                            <div class="pl-2">
+                                <span style="color: var(--blue);font-size: 10px;">david007</span>
+                                <div class="bg-white"
+                                    style="padding: 0px 4px; border-radius: 3px; width: 80px !important;">
+                                    <span class="text-neutral-500" style="font-size: 10px;"><i
+                                            class="fal fa-lock-alt mr-1" style="font-size: 10px;"></i>5.0<i
+                                            class="fal fa-chevron-down ml-2" style="font-size: 9px;"></i></span>
+                                    <span class="hidden text-neutral-500" style="font-size: 10px;"><i
+                                            class="fal fa-usd-circle mr-1" style="font-size: 10px;"></i>
+                                        0.05<i class="fal fa-chevron-down ml-2" style="font-size: 9px;"></i></span>
+                                </div>
+                            </div>
+                        </button>
+                        <ul id="dropdownMenu4" style="display: none" class="shadow-md"
+                            style="min-width: 120px !important; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0.400009px, 54px, 0px);">
+                            <li class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500">
+                                <div class="h-6 mb-1 text-sm text-neutral-500">
+                                    <input class="form-check-input" type="checkbox" onchange="getBalance(this)"
+                                        value="1" role="switch" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" style="font-size: 11px;"
+                                        for="flexSwitchCheckDefault">Lock Balance</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider starts-->
+        <div class="relative lg:block hidden p-2 bg-indigo-50">
+            <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3">
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'>
+                         <span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                    <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                        <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                            <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                    <i class="fal fa-usd-circle"></i> </span>
+                            </a>
+                        </div>
+                        <div class="pr-5">
+                            <a href="#user-modal" data-bs-toggle="modal">
+                                <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                Somuch...
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
+                                   </a>
+                              </div>
+                              <div class="pr-5">
+                                   <a href="#user-modal" data-bs-toggle="modal">
+                                        <span
+                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
+                                   </a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
+                                   </a>
+                              </div>
+                              <div class="pr-5">
+                                   <a href="#user-modal" data-bs-toggle="modal">
+                                        <span
+                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
+                                   </a>
+                              </div>
+                         </div>
+                    </div> -->
+
+            </div>
+        </div>
+        <!-- Slider ends-->
+    </header>
+    <!--Header Ends-->
+
+    <div class="fixed right-0 top-36 w-px h-px bg-white rounded-bl-md rounded-tl-md shadow-sm z-40">
+        <div class="relative w-full h-full bg-transparent">
+            <span
+                class="absolute flex -left-10 top-0 w-9 h-9 bg-blue-800 justify-center items-center rounded-bl-md rounded-tl-md cursor-pointer z-50"><i
+                    class="fal fa-arrow-left text-xs text-white font-bold"></i></span>
+            <span class="hidden"><i class="fal fa-arrow-left"></i></span>
+            <div class="hidden">
+                <i class="fal fa-comment-alt-lines"></i>
+            </div>
+            <div class="hidden">
+                <span>
+                    <a href="#user-modal" data-bs-toggle="modal">
+                        <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                    </a>
+                </span>
+                <span>
+                    <a href="#user-modal" data-bs-toggle="modal">
+                        <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                    </a>
+                </span>
+                <span>
+                    <a href="#user-modal" data-bs-toggle="modal">
+                        <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                    </a>
+                </span>
+                <span>
+                    <a href="#user-modal" data-bs-toggle="modal">
+                        <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                    </a>
+                </span>
+                <span>
+                    <a href="#user-modal" data-bs-toggle="modal">
+                        <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-center bg-indigo-50">
+        <div class="relative w-full min-h-screen bg-indigo-50">
+            <!--Main Section Starts-->
+            <div class="py-12 px-4 bg-indigo-50">
+                <!-- Cash Payout section starts-->
+                <div class="lg:w-2/3 w-full mx-auto">
+                    <div class="py-6">
+                        <h4 class="font-medium text-2xl">Profile</h4>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg px-4 py-2">
+                        <div class="my-3">
+                            <div class="flex flex-col bg-white break-words relative border border-transparent">
+                                <div class="flex flex-wrap">
+                                    <div
+                                        class="lg:w-5/12 w-full px-3 md:border-r border-0 border-neutral-300 flex justify-center items-center">
+                                        <div class="px-3">
+                                            <div class="flex justify-center">
+                                                <img src="assets/img/Ellipse 55.png"
+                                                    class="w-[130px] h-[130px] object-cover object-top rounded-full">
+                                            </div>
+                                            <h5 class="font-medium text-2xl py-4">El Bronco VC CBE <span></span></h5>
+                                            <div class="flex justify-between items-center">
+                                                <div class="text-center">
+                                                    <span class="text-black font-medium">142</span>
+                                                    <span class="block text-sm text-neutral-500">Completed<br>
+                                                        Offers</span>
+                                                </div>
+                                                <div class="text-center px-4">
+                                                    <span class="text-black font-medium">10,564</span>
+                                                    <span class="block text-sm text-neutral-500">Coins<br> Earned</span>
+                                                </div>
+                                                <div class="text-center">
+                                                    <span class="text-black font-medium">0</span>
+                                                    <span class="block text-sm text-neutral-500">Users<br>
+                                                        Referred</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lg:w-7/12 w-full p-0">
+                                        <div class="flex justify-between items-center border-b border-neutral-300 p-3">
+                                            <h5 class="font-medium text-2xl ">Earnings</h5>
+                                            <p class="text-neutral-500">Last 7 days</p>
+                                        </div>
+                                        <div class="p-2" id="earning-graph">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="py-3">
+                        <div class="py-4 profile-tabs">
+                            <ul class="flex flex-wrap justify-between w-full border-0 mb-6 bg-white" id="myTab"
+                                role="tablist">
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                    <button
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all"
+                                        id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
+                                        role="tab" aria-controls="general" aria-selected="true">General</button>
+                                </li>
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                    <button
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
+                                        id="earnings-tab" data-bs-toggle="tab" data-bs-target="#earnings" type="button"
+                                        role="tab" aria-controls="earnings" aria-selected="false">Earnings</button>
+                                </li>
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                    <button
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
+                                        id="withdrawl-tab" data-bs-toggle="tab" data-bs-target="#withdrawl"
+                                        type="button" role="tab" aria-controls="withdrawl"
+                                        aria-selected="false">Withdrawls</button>
+                                </li>
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                    <button
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
+                                        id="referrals-tab" data-bs-toggle="tab" data-bs-target="#referrals"
+                                        type="button" role="tab" aria-controls="referrals"
+                                        aria-selected="false">Referrals</button>
+                                </li>
+                            </ul>
+                            <div class="" id="myTabContent">
+                                <!-- general tab -->
+                                <div class="py-4 block" id="general" role="tabpanel" aria-labelledby="general-tab">
+                                    <div class="flex user-profile">
+                                        <div class="lg:w-1/2 md:w-1/2 w-full my-3 pr-2">
+                                            <div
+                                                class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                                <h4 class="font-medium text-2xl mb-4">Your Info</h4>
+                                                <form name="user-info">
+                                                    <div class="flex flex-wrap">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="id">Monetars ID</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="id" id="id" value="576843995" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="date_joined">Date
+                                                                    Joined</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="date_joined" id="date_joined" readonly
+                                                                    value="09-06-2022">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="balance">Balance</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="balance" id="balance" readonly value="452">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="holding_balance">Holding
+                                                                    Balance</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="holding_balance" id="holding_balance" readonly
+                                                                    value="653">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="refer_earning">Referral
+                                                                    Earnings</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="refer_earning" id="refer_earning" readonly
+                                                                    value="452">
+                                                            </div>
+                                                        </div>
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="referrer">Referrer</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="referrer" id="referrer" readonly
+                                                                    value="Lorem Ipsum">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="card rounded border-0 p-4 profile-card-2">
+                                                <h4 class="m-0 mb-4">Personal Info</h4>
+                                                <form name="user-profile">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="first_name">First
+                                                                    Name</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="first_name" id="first_name" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="last_name">Last
+                                                                    Name</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="last_name" id="last_name" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="stret">Street &
+                                                                    Number</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="stret" id="stret" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="city">City</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="city" id="city" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="zipcode">Zipcode</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="zipcode" id="zipcode" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="country">Country</label>
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="country" id="country" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <div class="px-2">
+                                                                <label class="text-sm text-neutral-500"
+                                                                    for="email">Email</label>
+                                                                <input type="email"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="email" id="email" required value="">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12 col-lg-12 mb-2">
+                                                            <button type="submit"
+                                                                class="btn btn-sm px-5 btn-primary">Save</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="lg:w-1/2 md:w-1/2 w-full my-3 pl-2">
+                                            <div
+                                                class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                                <h4 class="font-medium text-2xl mb-6">Profile Settings</h4>
+                                                <div>
+                                                    <h6 class="mb-2 text-base">Change Display Name</h6>
+                                                    <form>
+                                                        <small class="font-light text-sm block mb-3 tracking-wide">Edit
+                                                            Display Name:</small>
+                                                        <div class="flex justify-start items-center">
+                                                            <div class="basis-2/3 pr-2">
+                                                                <input type="text"
+                                                                    class="block w-full py-2 px-2 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    value="MacMa" required placeholder="Name"
+                                                                    name="username">
+                                                            </div>
+                                                            <div class="basis-1/3">
+                                                                <button type="submit"
+                                                                    class="flex justify-center text-center w-full text-sm py-2 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all">Change</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <h6 class="mt-4 mb-3">Profile Visibility</h6>
+                                                    <small class="font-light text-sm block mb-3 tracking-wide">
+                                                        Setting your profile to private will prevent anyone fom viewing
+                                                        your public profile information except your username and avatar.
+                                                    </small>
+                                                    <div class="flex justify-start items-center">
+                                                        <div class="basis-2/3 pr-2">
+                                                            <div class="inline-block mr-4 pl-5 mb-2">
+                                                                <input
+                                                                    class="float-left -ml-6 bg-indigo-200 w-4 h-4 mt-1 bg-center border border-indigo-300"
+                                                                    type="radio" name="profile_visibility"
+                                                                    id="publicRadio" value="public">
+                                                                <label class="inline-block"
+                                                                    for="publicRadio">Public</label>
+                                                            </div>
+                                                            <div class="inline-block mr-4 pl-5 mb-2">
+                                                                <input
+                                                                    class="float-left -ml-6 bg-indigo-200 w-4 h-4 mt-1 bg-center border border-indigo-300"
+                                                                    type="radio" name="profile_visibility"
+                                                                    id="privateRadio" value="private">
+                                                                <label class="inline-block"
+                                                                    for="privateRadio">Private</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basis-1/3">
+                                                            <button type="submit"
+                                                                class="flex justify-center text-center w-full text-sm py-2 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all">Change</button>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-3 mb-2">Site Language</h6>
+                                                    <div class="flex">
+                                                        <div class="basis-2/3 pr-2">
+                                                            <div class="language dropdown">
+                                                                <!-- <button class="btn btn-sm btn-dropdown" type="button"
+                                                                    id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                                                    aria-expanded="false">
+                                                                    <span>Select language</span>
+                                                                    <i class="fal fa-chevron-down ms-2"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu border-0 p-0 shadow"
+                                                                    aria-labelledby="dropdownMenuButton1">
+                                                                    <li><a class="dropdown-item" href="#">English</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">German</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">Spanish</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item" href="#">French</a>
+                                                                    </li>
+                                                                </ul> -->
+                                                                <!-- <label for="cars">Select language :</label> -->
+
+                                                                <select
+                                                                    class="block w-full py-2 px-3 text-sm font-bold text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                                    name="language" id="cars">
+                                                                    <option selected disabled value="">Select Language
+                                                                    </option>
+                                                                    <option value="English">English</option>
+                                                                    <option value="German">German</option>
+                                                                    <option value="Spanish">Spanish</option>
+                                                                    <option value="French">French</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="basis-1/3">
+                                                            <button type="submit"
+                                                                class="flex justify-center text-center w-full text-sm py-2 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all">Change</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card rounded border-0 p-4 profile-card-2">
+                                                <h4 class="m-0 mb-4">Account Settings</h4>
+                                                <div>
+                                                    <h6>Two-factor authentication</h6>
+                                                    <small>
+                                                        You've deactivated two-factor authentication. We strongly
+                                                        recommend to activate on your account.
+                                                    </small>
+                                                    <div class="btn-box mb-3">
+                                                        <button
+                                                            class="btn btn-primary btn-sm d-block w-100">Activate</button>
+                                                    </div>
+                                                    <h6 class="mt-1 mb-2">Change Password</h6>
+                                                    <form>
+                                                        <div class="mb-1 row">
+                                                            <div class="lg:w-1/2 md:w-1/2 w-full">
+                                                                <label for="pass" class="text-sm text-neutral-500 px-1"
+                                                                    style="font-size: 12px; font-family: light;">Current
+                                                                    Password</label>
+                                                                <input type="password"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm w-100"
+                                                                    required placeholder="Current Password" name="pass"
+                                                                    style="background-color: var(--light-blue);">
+
+                                                            </div>
+                                                            <div class="lg:w-1/2 md:w-1/2 w-full">
+                                                                <label for="c_pass"
+                                                                    class="text-sm text-neutral-500 px-1"
+                                                                    style="font-size: 12px; font-family: light;">New
+                                                                    Password</label>
+                                                                <input type="password"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm w-100"
+                                                                    required placeholder="New Password" name="c_pass"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="btn-box mt-3">
+                                                            <button class="btn btn-primary btn-sm d-block w-100"
+                                                                type="submit">Change Password</button>
+                                                        </div>
+                                                    </form>
+
+                                                    <h6 class="mt-3 mb-2">Delete Account</h6>
+                                                    <small style="font-size: 12px;">Once you delete your account, there
+                                                        is no going back. Please be certain.</small>
+                                                    <div class="btn-box mt-3">
+                                                        <button class="btn btn-delete btn-sm d-block w-100">Delete
+                                                            Account</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- earning tab -->
+                                <div class="tab-pane py-3 fade" id="earnings" role="tabpanel"
+                                    aria-labelledby="earnings-tab">
+                                    <div class="row earning-tab bg-white m-0">
+                                        <ul class="nav nav-tabs mb-4" id="myWithdrawlTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="earning-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#earning" type="button" role="tab"
+                                                    aria-controls="earning" aria-selected="true">earnings</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="offer-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#offer" type="button" role="tab"
+                                                    aria-controls="offer" aria-selected="false">held offers</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="chargeback-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#chargeback" type="button" role="tab"
+                                                    aria-controls="chargeback"
+                                                    aria-selected="false">chargebacks</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content bg-white" id="myWithdrawlTabContent">
+                                            <div class="tab-pane py-3 fade show active" id="earning" role="tabpanel"
+                                                aria-labelledby="earning-tab">
+                                                <div>
+                                                    <h6 class="m-0 text-dark" style="font-family: med;">Earnings</h6>
+                                                    <div class="earning-filters">
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="from_date"
+                                                                    class="text-sm text-neutral-500 d-block">Period
+                                                                    from</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="from_date" id="from_date"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="until"
+                                                                    class="text-sm text-neutral-500 d-block">Until</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="until" id="until"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="offerwall"
+                                                                    class="text-sm text-neutral-500 d-block">Offerwall</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="offerwall" id="offerwall"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="">Show All</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="entries"
+                                                                    class="text-sm text-neutral-500 d-block">Entries
+                                                                    per page</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="entries" id="entries"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="10">10 Entries</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child sp">
+                                                            <div class="">
+                                                                <label
+                                                                    class="text-sm text-neutral-500 text-white mb-1">Entries
+                                                                    per
+                                                                    page</label>
+                                                                <button
+                                                                    class="btn btn-sm btn-primary d-block w-80">Update</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive earning-table">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Name</td>
+                                                                    <td>Coins</td>
+                                                                    <td>Bonus</td>
+                                                                    <td>Wall</td>
+                                                                    <td>Date</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Daily Bonus</td>
+                                                                    <td>1- Coins</td>
+                                                                    <td>-</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>a day ago</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end table-pagination">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination">
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link"
+                                                                        href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane py-3 fade" id="offer" role="tabpanel"
+                                                aria-labelledby="offer-tab">
+                                                <div>
+                                                    <h6 class="m-0 text-dark" style="font-family: med;">Held Offers</h6>
+                                                    <div class="earning-filters">
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="from_date"
+                                                                    class="text-sm text-neutral-500 d-block">Period
+                                                                    from</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="from_date" id="from_date"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="until"
+                                                                    class="text-sm text-neutral-500 d-block">Until</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="until" id="until"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="offerwall"
+                                                                    class="text-sm text-neutral-500 d-block">Offerwall</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="offerwall" id="offerwall"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="">Show All</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="entries"
+                                                                    class="text-sm text-neutral-500 d-block">Entries
+                                                                    per page</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="entries" id="entries"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="10">10 Entries</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child sp">
+                                                            <div class="">
+                                                                <label
+                                                                    class="text-sm text-neutral-500 text-white mb-1">Entries
+                                                                    per
+                                                                    page</label>
+                                                                <button
+                                                                    class="btn btn-sm btn-primary d-block w-80">Update</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive earning-table">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Name</td>
+                                                                    <td>Coins</td>
+                                                                    <td>Bonus</td>
+                                                                    <td>Wall</td>
+                                                                    <td>Date</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Daily Bonus</td>
+                                                                    <td>1- Coins</td>
+                                                                    <td>-</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>a day ago</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end table-pagination">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination">
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link"
+                                                                        href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane py-3 fade" id="chargeback" role="tabpanel"
+                                                aria-labelledby="chargeback-tab">
+                                                <div>
+                                                    <h6 class="m-0 text-dark" style="font-family: med;">ChargeBacks</h6>
+                                                    <div class="earning-filters">
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="from_date"
+                                                                    class="text-sm text-neutral-500 d-block">Period
+                                                                    from</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="from_date" id="from_date"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="until"
+                                                                    class="text-sm text-neutral-500 d-block">Until</label>
+                                                                <input type="date"
+                                                                    class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm"
+                                                                    name="until" id="until"
+                                                                    style="background-color: var(--light-blue);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="offerwall"
+                                                                    class="text-sm text-neutral-500 d-block">Offerwall</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="offerwall" id="offerwall"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="">Show All</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child">
+                                                            <div class="pe-1">
+                                                                <label for="entries"
+                                                                    class="text-sm text-neutral-500 d-block">Entries
+                                                                    per page</label>
+                                                                <select class="form-select form-select-sm"
+                                                                    name="entries" id="entries"
+                                                                    style="background-color: var(--light-blue);border: none;">
+                                                                    <option value="10">10 Entries</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="my-3 earning-filters-child sp">
+                                                            <div class="">
+                                                                <label
+                                                                    class="text-sm text-neutral-500 text-white mb-1">Entries
+                                                                    per
+                                                                    page</label>
+                                                                <button
+                                                                    class="btn btn-sm btn-primary d-block w-80">Update</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive earning-table">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Name</td>
+                                                                    <td>Coins</td>
+                                                                    <td>Bonus</td>
+                                                                    <td>Wall</td>
+                                                                    <td>Date</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Daily Bonus</td>
+                                                                    <td>1- Coins</td>
+                                                                    <td>-</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>a day ago</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end table-pagination">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination">
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link"
+                                                                        href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- withdrawl tab -->
+                                <div class="tab-pane py-3 fade" id="withdrawl" role="tabpanel"
+                                    aria-labelledby="withdrawl-tab">
+                                    <div class="row earning-tab withdrawls-tab bg-white m-0">
+                                        <ul class="nav nav-tabs mb-4" id="myWithdrawTab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="withdrawls-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#withdrawls" type="button" role="tab"
+                                                    aria-controls="withdrawls" aria-selected="true">withdrawls</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pending-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#pending" type="button" role="tab"
+                                                    aria-controls="pending" aria-selected="false">pending</button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content bg-white" id="myWithdrawTabContent">
+                                            <div class="tab-pane py-3 fade show active" id="withdrawls" role="tabpanel"
+                                                aria-labelledby="withdrawls-tab">
+                                                <div>
+                                                    <h6 class="m-0 mb-3 text-dark" style="font-family: med;">Withdrawls
+                                                    </h6>
+                                                    <div class="table-responsive earning-table">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Date</td>
+                                                                    <td>Method</td>
+                                                                    <td>Amount</td>
+                                                                    <td>Invoice</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>01-05-2022</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>
+                                                                        <a class="btn btn-sm btn-primary"><i
+                                                                                class="fal fa-arrow-alt-to-bottom me-2 text-white"></i>Download</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end table-pagination">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination">
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link"
+                                                                        href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane py-3 fade" id="pending" role="tabpanel"
+                                                aria-labelledby="pending-tab">
+                                                <div>
+                                                    <h6 class="m-0 text-dark mb-3" style="font-family: med;">Pending
+                                                        Withdrawls</h6>
+                                                    <div class="table-responsive earning-table">
+                                                        <table class="table table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <td>Date</td>
+                                                                    <td>Method</td>
+                                                                    <td>Amount</td>
+                                                                    <td>Action</td>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>01-05-2022</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>Lorem ipsum</td>
+                                                                    <td>
+                                                                        <a class="btn btn-sm btn-delete"><i
+                                                                                class="fal fa-times-circle me-2 text-white"></i>Cancel</a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end table-pagination">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination">
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link"
+                                                                        href="#">1</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">2</a></li>
+                                                                <li class="page-item"><a class="page-link"
+                                                                        href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- referral tab -->
+                                <div class="tab-pane py-3 fade" id="referrals" role="tabpanel"
+                                    aria-labelledby="referrals-tab">
+                                    <div>
+                                        <div class="card round bg-white p-3 mb-3">
+                                            <h6 class="m-0 my-3 text-dark text-center" style="font-family: med;">Refer &
+                                                Earn</h6>
+                                            <p class="m-0 round text-center"
+                                                style="font-family: light; font-size: 14px;">
+                                                Earn unlimited rewards by referring your friends, family and followers.
+                                                You'll earn 10% of the confirmed payouts from your referred members.
+                                                Keep referring more friends and watch your earnings grow up!
+                                            </p>
+                                            <div class="p-3 my-3 round d-flex justify-content-between align-items-center"
+                                                style="background-color: var(--light-blue);font-family: regular; font-size: 14px;">
+                                                <div>
+                                                    <span style="color: var(--grey);">
+                                                        https://monetars.com/refer/?refer=EYOPBR
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <i class="fal fa-clone"
+                                                        style="color: var(--grey); font-size: 18px;"></i>
+                                                </div>
+                                            </div>
+                                            <p class="m-0 round text-center"
+                                                style="font-family: light; font-size: 14px;">
+                                                Share above Referral link or Unique Referral Code to your Friends &
+                                                Family.
+                                            </p>
+                                            <div class="text-center my-3">
+                                                <a href="#" class="btn me-3 text-white"
+                                                    style="background-color:  #3b5998">
+                                                    <i class="fab fa-facebook p-1 text-white"></i>
+                                                    <span class="p-1"><b>SHARE</b></span>
+                                                </a>
+                                                <a href="#" class="btn text-white" style="background-color: #00acee;">
+                                                    <i class="fab fa-twitter p-1 text-white"></i>
+                                                    <span class="p-1"><b>SHARE</b></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-transparent border-0 py-4 ps-4 pe-2">
+                                            <div class="d-flex justify-content-between align-items-center"
+                                                style="color: var(--grey);font-family: med;">
+                                                <span>Username</span>
+                                                <span class="ms-5">Registered</span>
+                                                <span>Earnings</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="card round border-0 bg-white p-3 mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <div class="d-flex justify-content-start align-items-center">
+                                                        <div>
+                                                            <span class="me-3">
+                                                                <a href="#user-modal" data-bs-toggle="modal">
+                                                                    <img src="assets/img/Ellipse 54.png" width="45px"
+                                                                        height="45px" class="rounded-circle"
+                                                                        style="object-fit: cover; object-position: top;">
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 style="font-family: med;">
+                                                                <a href="#user-modal" data-bs-toggle="modal"
+                                                                    class="text-decoration-none text-dark">Registered</a>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                </div>
+                                                <div>
+                                                    <span style="font-family: light;">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card round border-0 bg-white p-3 mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <div class="d-flex justify-content-start align-items-center">
+                                                        <div>
+                                                            <span class="me-3">
+                                                                <a href="#user-modal" data-bs-toggle="modal">
+                                                                    <img src="assets/img/Ellipse 54.png" width="45px"
+                                                                        height="45px" class="rounded-circle"
+                                                                        style="object-fit: cover; object-position: top;">
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 style="font-family: med;">
+                                                                <a href="#user-modal" data-bs-toggle="modal"
+                                                                    class="text-decoration-none text-dark">Registered</a>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                </div>
+                                                <div>
+                                                    <span style="font-family: light;">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card round border-0 bg-white p-3 mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <div class="d-flex justify-content-start align-items-center">
+                                                        <div>
+                                                            <span class="me-3">
+                                                                <a href="#user-modal" data-bs-toggle="modal">
+                                                                    <img src="assets/img/Ellipse 54.png" width="45px"
+                                                                        height="45px" class="rounded-circle"
+                                                                        style="object-fit: cover; object-position: top;">
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 style="font-family: med;">
+                                                                <a href="#user-modal" data-bs-toggle="modal"
+                                                                    class="text-decoration-none text-dark">Registered</a>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                </div>
+                                                <div>
+                                                    <span style="font-family: light;">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card round border-0 bg-white p-3 mb-3">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <div class="d-flex justify-content-start align-items-center">
+                                                        <div>
+                                                            <span class="me-3">
+                                                                <a href="#user-modal" data-bs-toggle="modal">
+                                                                    <img src="assets/img/Ellipse 54.png" width="45px"
+                                                                        height="45px" class="rounded-circle"
+                                                                        style="object-fit: cover; object-position: top;">
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div>
+                                                            <h6 style="font-family: med;">
+                                                                <a href="#user-modal" data-bs-toggle="modal"
+                                                                    class="text-decoration-none text-dark">Registered</a>
+                                                            </h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                </div>
+                                                <div>
+                                                    <span style="font-family: light;">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cash Payout section starts-->
+            </div>
+            <!--Main Section Ends-->
+
+            <!--Footer Starts-->
+            <footer class="absolute w-full bottom-0 h-10">
+                <div class="w-full py-12 px-2">
+                    <div class="lg:w-2/3 w-full mx-auto">
+                        <div class="text-center mb-6">
+                            <a href="index.html"><img src="assets/img/Monester-logo.png" class="mb-2" alt="Monster Logo"
+                                    style="width:210px; height: 50px"></a>
+                        </div>
+                        <div class="flex flex-wrap">
+                            <div class="basis-1/3 mt-2 px-2">
+                                <p class="text-lg text-neutral-500">Monetars is a project where<br>
+                                    online testers have the<br>
+                                    opportunity to complete various<br>
+                                    online assignments and receive<br>
+                                    money for it.</p>
+                                <div class="flex justify-start mt-4">
+                                    <span class="w-10 h-10 mr-2"><a
+                                            class="flex justify-center items-center w-full h-full rounded-full bg-neutral-500 hover:bg-black"
+                                            href="#"><i class="fab fa-facebook-f text-white text-xl"></i></a></span>
+                                    <span class="w-10 h-10 mr-2"><a
+                                            class="flex justify-center items-center w-full h-full rounded-full bg-neutral-500 hover:bg-black"
+                                            href="#"><i class="fab fa-instagram text-white text-xl"></i></a></span>
+                                    <span class="w-10 h-10 mr-2"><a
+                                            class="flex justify-center items-center w-full h-full rounded-full bg-neutral-500 hover:bg-black"
+                                            href="#"><i class="fab fa-twitter text-white text-xl"></i></a></span>
+                                    <span class="w-10 h-10 mr-2"><a
+                                            class="flex justify-center items-center w-full h-full rounded-full bg-neutral-500 hover:bg-black"
+                                            href="#"><i class="fab fa-discord text-white text-xl"></i></a></span>
+                                    <span class="w-10 h-10 mr-2"><a
+                                            class="flex justify-center items-center w-full h-full rounded-full bg-neutral-500 hover:bg-black"
+                                            href="#"><i class="fal fa-robot text-white text-xl"></i></a></span>
+                                </div>
+                            </div>
+                            <div class="basis-2/3 mt-2 px-2">
+                                <div class="flex flex-wrap">
+                                    <div class="md:basis-1/3 basis-full">
+                                        <h5 class="mb-3 font-medium">Account</h5>
+                                        <ul>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="#login-modal">Login</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="#register-modal">Register</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="faq.html">FAQ</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="md:basis-1/3 basis-full">
+                                        <h5 class="mb-3 font-medium">Company</h5>
+                                        <ul>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="about.html">About us</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="blogs.html">Blog</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="contact.html">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="md:basis-1/3 basis-full">
+                                        <h5 class="mb-3 font-medium">Legal</h5>
+                                        <ul>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="privacy.html">Privacy</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="terms.html">Terms and Conditions</a>
+                                            </li>
+                                            <li class="mb-2">
+                                                <a class="text-neutral-500" href="imprint.html">Imprint</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full pt-6 md:pb-6 pb-24 px-2 bg-indigo-50">
+                    <div class="lg:w-2/3 w-full mx-auto">
+                        <div class="flex flex-wrap">
+                            <div class="md:basis-1/2 basis-full px-2 mt-2 md:text-start text-center">
+                                <p class="text-neutral-500">Monetars.com | All rights reserved</p>
+                            </div>
+                            <div class="md:basis-1/2 basis-full px-2 mt-2 md:text-end text-center">
+                                <p class="text-neutral-500">&copy; Copyright 2020 - 2022</p>
+                                <!--                <div class="d-flex justify-content-end align-items-center flags-box">-->
+                                <!--                    <span class="ms-5">-->
+                                <!--                        <img src="assets/img/germany.png" alt="Germany Flag" width="30px" height="30px" class="rounded-circle">-->
+                                <!--                        Germany-->
+                                <!--                    </span>-->
+                                <!--                    <span class="ms-5">-->
+                                <!--                        <img src="assets/img/usa.png" alt="USA Flag" width="30px" height="30px" class="rounded-circle">-->
+                                <!--                        USA-->
+                                <!--                    </span>-->
+                                <!--                    <span class="ms-5">-->
+                                <!--                        <img src="assets/img/spain.png" alt="Spain Flag" width="30px" height="30px" class="rounded-circle">-->
+                                <!--                        Spain-->
+                                <!--                    </span>-->
+                                <!--                    <span class="ms-5">-->
+                                <!--                        <img src="assets/img/france.png" alt="France Flag" width="30px" height="30px" class="rounded-circle">-->
+                                <!--                        France-->
+                                <!--                    </span>-->
+                                <!--                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--Footer Ends-->
+        </div>
+
+        <div class="bg-indigo-50 hidden" style="width: 320px;display: block;">
+            <!--SideBox Starts -->
+            <div class="fixed right-0 top-[140px] w-[300px] h-auto rounded-bl-md rounded-tl-md z-50 shadow-md bg-white">
+                <div class="relative w-full h-full bg-transparent">
+                    <span
+                        class="absolute -left-9 top-0 w-9 h-9 bg-blue-800 rounded-bl-md rounded-tl-md flex justify-center items-center"
+                        id="btn-close"><i class="fal fa-arflex flex-wrap-left text-white font-bold"></i></span>
+                    <!-- 
+             <span class="absolute -left-9 top-0 w-9 h-9 bg-blue-800 rounded-bl-md rounded-tl-md flex justify-center items-center" id="btn-close"><i class="fal fa-arflex flex-wrap-right hidden  text-white font-bold"></i></span>
+              -->
+                    <div class="bg-indigo-200 text-center w-full h-11 flex justify-center items-center px-6 py-6">
+                        <div class="bg-white rounded-3xl flex justify-center d-flex justify-content-between w-full">
+                            <div class="w-1/2">
+                                <div class="relative">
+                                    <button onclick="displayToggle(dropdownMenu4)"
+                                        class="bg-blue-800 text-white border border-blue-800 text-center align-middle py-2  px-3 rounded-3xl flex items-center text-base">
+                                        <i class="fal fa-globe"></i>
+                                        <span class="mx-2">General</span>
+                                        <i class="fal fa-chevron-down ms-2"></i>
+                                    </button>
+                                    <ul id="dropdownMenu4" style="display: none"
+                                        class="absolute z-50 w-40 p-2 text-base text-left text-neutral-500 bg-white rounded-md translate-y-0 shadow-md">
+                                        <li><a class="text-gray-500 text-xs block w-full py-1 px-4 whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href="
+                                                #">
+                                                <i class="fal fa-globe text-sm"></i><span class="ml-2">General
+                                                    (70)</span>
+                                            </a></li>
+                                        <li><a class="text-gray-500 text-xs block w-full py-1 px-4 whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href="
+                                                #">
+                                                <i class="fal fa-star text-sm"></i><span class="ml-2">VIP
+                                                    (704)</span>
+                                            </a></li>
+                                        <li><a class="text-gray-500 text-xs w-full flex items-cente py-1 px-4 font-normal whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href="
+                                                #">
+                                                <img src="assets/img/germany.png"><span
+                                                    class="ml-2 inline-block">Germany
+                                                    (102)</span>
+                                            </a></li>
+                                        <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center"
+                                                href="#">
+                                                <img src="assets/img/spain.png"><span class="ml-2">Spain
+                                                    (92)</span>
+                                            </a></li>
+                                        <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center"
+                                                href="#">
+                                                <img src="assets/img/france.png"><span class="ml-2">France
+                                                    (74)</span>
+                                            </a></li>
+                                        <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center"
+                                                href="#">
+                                                <img src="assets/img/italy.png"><span class="ml-2">Italy
+                                                    (27)</span>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="w-1/2">
+                                <a
+                                    class="bg-white text-neutral-500 text-center align-middle py-2  px-8 rounded-3xl flex items-center text-base cursor-pointer">Support</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-4 pl-4 pb-12 pr-4 hidden">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-base">@MonetarsUpoort</span>
+                            <span class="text-sm">09:23PM</span>
+                        </div>
+                        <div class="mb-2">
+                            <p class="text-gray-500 text-sm">Send us a support message at any time and we'll
+                                get back to you as soon as
+                                possible!</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Tip: If you are missing coins, please check the
+                                FAQ section before contacting
+                                support.</p>
+                        </div>
+                    </div>
+                    <div class="w-full p-2 overflow-y-scroll h-80 bg-white">
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+                        <div class="p-2 flex justify-between">
+                            <div>
+                                <div class="flex justify-start items-center">
+                                    <div>
+                                        <span>
+                                            <a href="#user-modal" data-bs-toggle="modal">
+                                                <img src="assets/img/Ellipse 53.png"
+                                                    class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="pl-3">
+                                        <span class="p-0 block text-base">John</span>
+                                        <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="text-sm block">09:23</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="h-[55px] absolute -bottom-4 left-0 py-0 px-3 w-full bg-white">
+                        <form autocomplete="off">
+                            <div class="flex justify-between items-center bg-slate-200 py-2 px-3 rounded-md">
+                                <input class="w-11/12 border-0 text-black py-1 px-2 bg-transparent font-sm" type="text"
+                                    placeholder="Say Something...">
+                                <span class="w-[9%] bg-transparent flex justify-center items-center text-base"><i
+                                        class="fal fa-smile"></i></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--SideBox Ends -->
+        </div>
+    </div>
+
+    <!-- Canvas Starts -->
+    <div id="sidebarMenu1" style="display: none;"
+        class="fixed flex-col bottom-0 top-0 left-0 w-80 visible bg-white z-50">
+        <div class="flex justify-between items-center p-4">
+            <div>
+                <a class="mr-4 text-xl whitespace-nowrap" href="index.html">
+                    <img src="assets/img/Monester-Logo.png" alt="Monster Logo" style="width:200px; height: 50px">
+                </a>
+            </div>
+            <button onclick="sidebarToggle(sidebarMenu1)" class="p-2 -mt-2 -ml-2 -mr-2"><i
+                    class="text-xl text-neutral-500 fas fa-times"></i></button>
+        </div>
+        <div class="relative grow p-4 overflow-y-auto">
+            <div class="w-full py-1 bg-white ">
+                <!-- when user logged-in -->
+                <ul class="flex flex-col mx-auto mb-2">
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="profile.html">
+                            <i class="fal fa-user-alt px-2"></i>Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" aria-current="page"
+                            href="earn.html">
+                            <i class="fal fa-dollar-sign px-2"></i>Earn
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="withdraw.html">
+                            <i class="fal fa-credit-card-front px-2"></i>Withdraw
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="leaders.html">
+                            <i class="fal fa-star px-2"></i>Leaders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
+                            <i class="fal fa-gift px-2"></i>Promo
+                        </a>
+                    </li>
+                </ul>
+                <div class="absolute bottoleft-0 py-2 pl-1">
+                    <a class="inline-block py-1 px-3 text-base rounded-md bg-blue-800 text-white" href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Canvas Ends -->
+
+    <!-- Mobile Nav Starts-->
+    <div class="fixed md:hidden block bottom-0 left-0 p-1 w-screen h-20 bg-indigo-200 z-50">
+        <div>
+            <ul class="flex justify-between bg-indigo-200">
+                <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500"
+                        href="earn.html"><span class="block text-center"><i
+                                class="fal fa-hands-usd text-base text-neutral-500"></i></span>Earn</a></li>
+                <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500"
+                        href="withdraw.html"><span class="block text-center"><i
+                                class="fal fa-credit-card-front text-base text-neutral-500"></i></span>Withdraw</a>
+                </li>
+                <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500"
+                        href="leaders.html"><span class="block text-center"><i
+                                class="fal fa-trophy text-base text-neutral-500"></i></span>Leaders</a></li>
+                <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500"
+                        href="javascript:void(0);" class="btn-mobile-open"><span class="block text-center"><i
+                                class="fal fa-comment-alt text-base text-neutral-500"></i></span>Chat</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile Nav Ends-->
+
+    <!-- Login Modal Starts -->
+    <div class="hidden" id="login-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="flex flex-wrap login-form py-3">
+                            <div class="basis-1/3 px-4 login-form-left">
+                                <div class="text-center">
+                                    <h4 class="text-secondary mb-3" style="font-family: bold;">Welcome to</h4>
+                                    <img src="assets/img/Monester-logo.png" width="180px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 px-4">
+                                <div>
+                                    <form method="post" name="login-form" id="login-form" autocomplete="off">
+                                        <h3 class="form-head mb-4">Sign in</h3>
+                                        <div class="px-2 mb-3">
+                                            <label class="mb-1" for="email">Email Address</label>
+                                            <input type="email"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="email" name="email" required>
+                                        </div>
+                                        <div class="px-2 mb-4">
+                                            <label class="mb-1" for="password">Password</label>
+                                            <input type="password"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="password" name="password" required>
+                                        </div>
+                                        <div class="d-flex justify-content-start align-items-center mb-3">
+                                            <button class="btn btn-primary">Sign In</button>
+                                            <a href="#" class="reset reset-btn">Reset Password</a>
+                                        </div>
+                                        <div class="mb-3">
+                                            <span class="or">or</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <a href="#" class="btn btn-light w-100 me-2">
+                                                <img src="assets/img/google.png" width="50%" height="25px">
+                                            </a>
+                                            <a href="#" class="btn btn-light w-100">
+                                                <img src="assets/img/steam.png" width="50%" height="25px">
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login Modal Ends -->
+
+    <!-- Register Modal Starts -->
+    <div class="hidden" id="register-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="flex flex-wrap login-form py-3">
+                            <div class="basis-1/3 px-4 login-form-left">
+                                <div class="text-center">
+                                    <h4 class="text-secondary mb-3" style="font-family: bold;">Welcome to</h4>
+                                    <img src="assets/img/Monester-logo.png" width="180px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 px-4">
+                                <div>
+                                    <form method="post" name="register-form" id="register-form" autocomplete="off">
+                                        <h3 class="form-head mb-4">Create your Account</h3>
+                                        <div class="px-2 mb-3">
+                                            <label class="mb-1" for="email">Email Address</label>
+                                            <input type="email"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="email" name="email" required>
+                                        </div>
+                                        <div class="px-2 mb-3">
+                                            <label class="mb-1" for="name">Username</label>
+                                            <input type="text"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="name" name="name" required>
+                                        </div>
+                                        <div class="px-2 mb-4">
+                                            <label class="mb-1" for="new_password">Password</label>
+                                            <input type="password"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="new_password" name="new_password" required>
+                                        </div>
+                                        <div class="px-2 mb-4">
+                                            <label class="mb-1" for="cpassword">Confirm Password</label>
+                                            <input type="password"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="cpassword" name="cpassword" required>
+                                        </div>
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" required value="" id="terms"
+                                                name="terms">
+                                            <label class="form-check-label" for="terms">
+                                                <small>By signing up, you are agreeing t our <a href="#">Privacy
+                                                        Policy</a> and <a href="#">Term
+                                                        of Service.</a></small>
+                                            </label>
+                                            <label for="terms" id="terms-error" style="display: none;"
+                                                class="error"></label>
+                                        </div>
+                                        <div class=" mb-3">
+                                            <button class="btn btn-primary">Sign Up</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register Modal Ends -->
+
+    <!-- Forgot Password Modal Starts -->
+    <div class="hidden" id="forgot-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="flex flex-wrap login-form py-3">
+                            <div class="basis-1/3 px-4 login-form-left">
+                                <div class="text-center">
+                                    <h4 class="text-secondary mb-3" style="font-family: bold;">Welcome to</h4>
+                                    <img src="assets/img/Monester-logo.png" width="180px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 px-4">
+                                <div>
+                                    <form method="post" name="login-form" id="forgot-form" autocomplete="off">
+                                        <h3 class="form-head mb-4">Recover Password</h3>
+                                        <div class="px-2 mb-3">
+                                            <label class="mb-1" for="email_address">Email Address</label>
+                                            <input type="email"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="email_address" name="email_address" required>
+                                        </div>
+                                        <div class=" mb-3">
+                                            <button class="btn btn-primary">Recover Password</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Password Modal Ends -->
+
+    <!-- Reset Password Modal Starts -->
+    <div class="hidden" id="reset-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="flex flex-wrap login-form py-3">
+                            <div class="basis-1/3 px-4 login-form-left">
+                                <div class="text-center">
+                                    <h4 class="text-secondary mb-3" style="font-family: bold;">Welcome to</h4>
+                                    <img src="assets/img/Monester-logo.png" width="180px">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 px-4">
+                                <div>
+                                    <form method="post" name="register-form" id="reset-form" autocomplete="off">
+                                        <h3 class="form-head mb-4">Reset your Account Password</h3>
+                                        <div class="px-2 mb-4">
+                                            <label class="mb-1" for="new_password">Password</label>
+                                            <input type="password"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="new_pass" name="new_password" required>
+                                        </div>
+                                        <div class="px-2 mb-4">
+                                            <label class="mb-1" for="cpassword">Confirm Password</label>
+                                            <input type="password"
+                                                class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                                id="cpass" name="cpassword" required>
+                                        </div>
+                                        <div class=" mb-3">
+                                            <button class="btn btn-primary">Reset Password</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reset Password Modal Ends -->
+
+    <!-- User Profile Modal Starts -->
+    <div class="hidden" id="user-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid ">
+                        <div class="flex flex-wrap px-4 pb-3">
+                            <h5 class="mb-1" style="font-family: med;">User Profile</h5>
+                            <div class="col-lg-5 profile-box px-1">
+                                <div class="">
+                                    <div class="text-center">
+                                        <img src="assets/img/Ellipse 55.png">
+                                    </div>
+                                    <h5 class="text-center py-4">El Bronco VC CBE <span></span></h5>
+                                    <div class="stats">
+                                        <div class="text-center">
+                                            <span class="num">142</span>
+                                            <span>Completed<br> Offers</span>
+                                        </div>
+                                        <div class="text-center px-4">
+                                            <span class="num">10,564</span>
+                                            <span>Coins<br> Earned</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <span class="num">0</span>
+                                            <span>Users<br> Referred</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 ">
+                                <div class="graph-box p-2">
+                                    <h5 class=">Earnings</h5>
+                                 <p class=">Last 7 days</p>
+                                </div>
+                                <div class="p-2" id="earning-graph" style="height: 300px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- User Profile Ends -->
+
+    <!-- Promo Modal Starts -->
+    <div class="hidden" id="promo-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="text-center">
+                            <h4>Promotional Code</h4>
+                            <p>Follow our socials to find out when codes are shared</p>
+                            <form>
+                                <div class="mb-3 col-lg-10 col-sm-12 mx-auto">
+                                    <input type="text"
+                                        class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all"
+                                        placeholder="Enter Promocode" required>
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-primary">Redeem</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Promo Modal Ends -->
+
+
+    <!-- Jquery -->
+    <script src="src/jquery/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Validation -->
+    <script src="assets/jquery-validate/jquery.validate.min.js"></script>
+    <!--Slick JS-->
+    <script src="assets/slick/slick.js"></script>
+    <!-- Custom JS -->
+    <!-- Highcharts CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.0.0/highcharts.js"
+        integrity="sha512-//WD7Gq/302cFYMIeO2Y8ZCkrYDs/yOpZvSBjhc4QXeLuBChYmBDQg7ydKQLNAmJiuPZgccT85ZlL9s/ZghLBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+
+</html>
