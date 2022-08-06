@@ -27,8 +27,8 @@
 <body>
 
      <!--Header Starts-->
-     <header class="sticky to z-50">
-          <nav class="relative md:flex hidden justify-between items-center flex-wrap py-2 px-2 bg-white">
+     <header class="sticky top-0 z-50">
+          <nav class="relative md:flex hidden justify-between items-center flex-wrap py-2 px-2 bg-white shadow-md">
                <a class="pt-1 pb-1 mr-4 text-xl whitespace-nowrap" href="index.html">
                     <img src="assets/img/Monester-Logo.png" alt="Monster Logo" style="width:200px; height: 50px">
                </a>
@@ -37,7 +37,7 @@
                          <i class="fal fa-align-right text-blue-800"></i>
                     </span>
                </button>
-               <div style="display: none" class="xl:flex xl:basis-auto basis-full grow items-center" id="dropdownMenu3">
+               <div class="xl:flex hidden xl:basis-auto basis-full grow items-center" id="dropdownMenu3">
                     <ul class="flex xl:flex-row flex-col mx-auto lg:mb-0 mb-2 ">
                          <li class="nav-item">
                               <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" aria-current="page" href="earn.html">
@@ -76,7 +76,8 @@
                               <ul style="display: none;" class="absolute top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50" style="min-width: 130px !important;"
                                    id="dropdownMenu1">
                                    <li><a class="block w-full py-1 px-4 text-sm clear-both whitespace-nowrap text-neutral-500 hover:bg-blue-800 hover:text-white" href="profile.html"><i
-                                                  class="fal fa-user-circle mr-2 text-neutral-500"></i>User Profile</a></li>
+                                                  class="fal fa-user-circle mr-2 text-neutral-500"></i>User Profile</a>
+                                   </li>
                                    <li><a class="block w-full py-1 px-4 text-sm clear-both whitespace-nowrap text-neutral-500 hover:bg-blue-800 hover:text-white" href="#"><i
                                                   class="fal fa-sign-out-alt mr-2 text-neutral-500"></i>Logout</a></li>
                               </ul>
@@ -115,7 +116,7 @@
                </div>
           </nav>
 
-          <div class="flex justify-between items-center bg-white p-2">
+          <div class="md:hidden flex p-2 bg-white justify-between items-center z-50">
                <div>
                     <div>
                          <button onclick="sidebarToggle(sidebarMenu1)" class="relative mx-1 py-1 px-2 text-sm bg-white">
@@ -124,7 +125,6 @@
                     </div>
                </div>
                <div>
-                    <!-- when user logged-in -->
                     <div class="my-1">
                          <div class="relative">
                               <button onclick="displayToggle(dropdownMenu4)" class="flex justify-start items-center p-1 text-sm bg-indigo-200">
@@ -136,8 +136,8 @@
                                         <div class="bg-white" style="padding: 0px 4px; border-radius: 3px; width: 80px !important;">
                                              <span class="text-neutral-500" style="font-size: 10px;"><i class="fal fa-lock-alt mr-1" style="font-size: 10px;"></i>5.0<i class="fal fa-chevron-down ml-2"
                                                        style="font-size: 9px;"></i></span>
-                                             <span class="hidden text-neutral-500" style="font-size: 10px;"><i class="fal fa-usd-circle mr-1" style="font-size: 10px;"></i> 0.05<i
-                                                       class="fal fa-chevron-down ml-2" style="font-size: 9px;"></i></span>
+                                             <span class="hidden text-neutral-500" style="font-size: 10px;"><i class="fal fa-usd-circle mr-1" style="font-size: 10px;"></i>
+                                                  0.05<i class="fal fa-chevron-down ml-2" style="font-size: 9px;"></i></span>
                                         </div>
                                    </div>
                               </button>
@@ -152,160 +152,179 @@
                               </ul>
                          </div>
                     </div>
-                    <!-- when user not logged-in -->
-                    <!-- <div>
-                         <button class="py-1 px-2">Login</button>
-                         <button class="py-1 px-3 bg-blue-800 text-white hover:bg-blue-900">Register</button>
-                    </div> -->
                </div>
           </div>
 
           <!-- Slider starts-->
-          <div class="container-fluid py-2" style="background-color: var(--light);">
-               <div class="slider">
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
+          <div class="relative lg:block hidden p-2 bg-indigo-50">
+               <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3">
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class='yeah'>
+                         <span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+
+
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <!-- <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span
+                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="col-lg-12">
-                         <div class="mini-box black-tooltip" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
+                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
+                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
+                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
                     <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
                     <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="mini-box-left">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span>100<i class="fal fa-usd-circle"></i></span>
+                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
+                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
+                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
+                                             <i class="fal fa-usd-circle"></i> </span>
                                    </a>
                               </div>
-                              <div class="mini-box-right">
+                              <div class="pr-5">
                                    <a href="#user-modal" data-bs-toggle="modal">
-                                        <span><span class="sp">s</span>Somuch...</span>
+                                        <span
+                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
+                                        Somuch...
                                    </a>
                               </div>
                          </div>
-                    </div>
+                    </div> -->
+
                </div>
           </div>
           <!-- Slider ends-->
-
      </header>
      <!--Header Ends-->
 
-     <div class="sidebox-2 shadow-sm">
-          <div class="overlay-2">
-               <span class="toggle-box-2 btn-open"><i class="fal fa-arrow-left"></i></span>
-               <span class="toggle-box-3"><i class="fal fa-arrow-left"></i></span>
-               <div class="up-header">
+     <div class="fixed right-0 top-36 w-px h-px bg-white rounded-bl-md rounded-tl-md shadow-sm z-40">
+          <div class="relative w-full h-full bg-transparent">
+               <span class="absolute flex -left-10 top-0 w-9 h-9 bg-blue-800 justify-center items-center rounded-bl-md rounded-tl-md cursor-pointer z-50"><i
+                         class="fal fa-arrow-left text-xs text-white font-bold"></i></span>
+               <span class="hidden"><i class="fal fa-arrow-left"></i></span>
+               <div class="hidden">
                     <i class="fal fa-comment-alt-lines"></i>
                </div>
-               <div class="up-body-2">
+               <div class="hidden">
                     <span>
                          <a href="#user-modal" data-bs-toggle="modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
@@ -335,23 +354,26 @@
           </div>
      </div>
 
-     <div class="parent">
-          <div class="child-1">
+     <div class="flex justify-center bg-indigo-50">
+          <div class="relative w-full min-h-screen bg-indigo-50">
                <!--Main Section Starts-->
-               <div class="container-fluid bg-my-light py-5">
+               <div class="py-12 px-4 bg-indigo-50">
                     <!-- First Section Starts-->
-                    <div class="test-box col-lg-8 mx-auto">
-                         <div class="bg-white round shadow-sm px-4 py-2">
-                              <div class="row">
-                                   <div class="col-md-4">
-                                        <img src="assets/img/man-with-money.png" alt="Man With Money" height="200px" style="position: relative;top: -30px;left: 3px;">
+                    <div class="lg:w-2/3 w-full mx-auto">
+                         <div class="bg-white rounded-xl shadow-lg px-4 py-2">
+                              <div class="flex flex-col md:flex-row relative">
+                                   <div class="md:w-1/3 w-full">
+                                        <img src="assets/img/man-with-money.png" alt="Man With Money" class="relative h-52 -top-8 left-1">
                                    </div>
-                                   <div class="col-md-8">
-                                        <div class="mt-5">
-                                             <p class="m-0 pb-2">Get rewarded for watching videos & completing tasks.</p>
-                                             <p class="m-0 pb-3">Earn free <a href="#" class="sp-link">Google Play Funds</a></p>
+                                   <div class="md:w-2/3 w-full">
+                                        <div class="mt-12">
+                                             <p class="pb-2">Get rewarded for watching videos & completing tasks.
+                                             </p>
+                                             <p class="pb-4">Earn free <a href="#" class="capitalize text-blue-800 font-bold">Google Play
+                                                       Funds</a></p>
                                              <div class="text-end">
-                                                  <button class="btn btn-primary">Start Earning</button>
+                                                  <button class="inline-block bg-blue-800 text-white hover:bg-blue-900 text-center align-middle py-2  px-3 rounded-md items-center text-base">Start
+                                                       Earning</button>
                                              </div>
                                         </div>
                                    </div>
@@ -361,36 +383,40 @@
                     <!-- First Section Ends-->
 
                     <!-- How It works section starts-->
-                    <div class="test-box col-lg-8 mx-auto">
-                         <div class="common-head py-4">
-                              <h4>How does it work?</h4>
+                    <div class="lg:w-2/3 w-full mx-auto">
+                         <div class="py-6">
+                              <h4 class="text-center text-2xl font-medium">How does it work?</h4>
                          </div>
-                         <div class="row py-4">
-                              <div class="col-lg-4 col-md-6 mt-2 mb-4">
-                                   <div class="card border-0 round px-3 py-5 position-relative work-card">
-                                        <span>
-                                             <i class="fal fa-dollar-sign text-white"></i>
+                         <div class="flex flex-wrap justify-between py-6">
+                              <div class="lg:basis-1/3 md:basis-1/2 basis-full mt-2 mb-6 px-2">
+                                   <div class="relative flex flex-col max-h-56 py-12 px-4 md:my-0 my-4 break-words shadow-lg rounded-xl bg-white">
+                                        <span class="absolute flex justify-center items-center w-14 h-14 -top-6 left-6 text-white bg-blue-800 rounded-full">
+                                             <i class="fal fa-dollar-sign text-2xl text-white"></i>
                                         </span>
-                                        <h4 class="m-0 py-3 text-center">Earn</h4>
-                                        <p class="m-0 pb-3 text-center">Choose from our massive selection of hundreds of offers to complete</p>
+                                        <h4 class="py-4 text-center font-bold text-2xl">Earn</h4>
+                                        <p class="pb-4 text-center text-neutral-500 text-sm">Choose from our massive
+                                             selection of hundreds of
+                                             offers to complete</p>
                                    </div>
                               </div>
-                              <div class="col-lg-4 col-md-6 mt-2 mb-4">
-                                   <div class="card border-0 round px-3 py-5 position-relative work-card">
-                                        <span>
-                                             <i class="fal fa-shopping-bag text-white"></i>
+                              <div class="lg:basis-1/3 md:basis-1/2 basis-full mt-2 mb-6 px-2">
+                                   <div class="relative flex flex-col max-h-56 py-12 px-4 md:my-0 my-4 break-words shadow-lg rounded-xl bg-white">
+                                        <span class="absolute flex justify-center items-center w-14 h-14 -top-6 left-6 text-white bg-blue-800 rounded-full">
+                                             <i class="fal fa-shopping-bag text-2xl text-white"></i>
                                         </span>
-                                        <h4 class="m-0 py-3 text-center">Shop</h4>
-                                        <p class="m-0 pb-3 text-center">Shop through our huge range of cash out methods to find the one you want.</p>
+                                        <h4 class="py-4 text-center font-bold text-2xl">Shop</h4>
+                                        <p class="pb-4 text-center text-neutral-500 text-sm">Shop through our huge range of cash out methods
+                                             to find the one you want.</p>
                                    </div>
                               </div>
-                              <div class="col-lg-4 col-md-6 mt-2 mb-4">
-                                   <div class="card border-0 round px-3 py-5 position-relative work-card">
-                                        <span>
-                                             <i class="fal fa-credit-card-front text-white"></i>
+                              <div class="lg:basis-1/3 md:basis-1/2 basis-full mt-2 mb-6 px-2">
+                                   <div class="relative flex flex-col max-h-56 py-12 px-4 md:my-0 my-4 break-words shadow-lg rounded-xl bg-white">
+                                        <span class="absolute flex justify-center items-center w-14 h-14 -top-6 left-6 text-white bg-blue-800 rounded-full">
+                                             <i class="fal fa-credit-card-front text-2xl text-white"></i>
                                         </span>
-                                        <h4 class="m-0 py-3 text-center">Withdraw</h4>
-                                        <p class="m-0 pb-3 text-center">Withdraw to your favorite currency and spend it however you like.</p>
+                                        <h4 class="py-4 text-center font-bold text-2xl">Withdraw</h4>
+                                        <p class="pb-4 text-center text-neutral-500 text-sm">Withdraw to your favorite currency and spend it
+                                             however you like.</p>
                                    </div>
                               </div>
                          </div>
@@ -398,45 +424,45 @@
                     <!-- How It works section ends-->
 
                     <!-- Little Stats section starts-->
-                    <div class="test-box col-lg-8 mx-auto">
+                    <div class="lg:w-2/3 w-full mx-auto">
                          <div class="p-2">
-                              <div class="row p-3 bg-blue round">
-                                   <div class="col-lg-4 col-md-4 my-2">
-                                        <div class="stat-card">
-                                             <div class="stat-card-left">
-                                                  <span>
+                              <div class="flex flex-wrap p-4 rounded-xl bg-blue-800">
+                                   <div class="basis-1/3 my-2">
+                                        <div class="flex justify-center items-center">
+                                             <div class="">
+                                                  <span class="w-14 h-14 rounded-full flex justify-center items-center bg-white text-blue-800 text-2xl">
                                                        <i class="fal fa-dollar-sign"></i>
                                                   </span>
                                              </div>
-                                             <div class="stat-card-right ps-3">
-                                                  <span><b>1,60,976,654</b></span>
-                                                  <span>Total Coins Earned</span>
+                                             <div class="pl-3">
+                                                  <span class="block text-white"><b>1,60,976,654</b></span>
+                                                  <span class="block text-white">Total Coins Earned</span>
                                              </div>
                                         </div>
                                    </div>
-                                   <div class="col-lg-4 col-md-4 my-2">
-                                        <div class="stat-card">
-                                             <div class="stat-card-left">
-                                                  <span>
+                                   <div class="basis-1/3 my-2">
+                                        <div class="flex justify-center items-center">
+                                             <div class="">
+                                                  <span class="w-14 h-14 rounded-full flex justify-center items-center bg-white text-blue-800 text-2xl">
                                                        <i class="fal fa-user-alt"></i>
                                                   </span>
                                              </div>
-                                             <div class="stat-card-right ps-3">
-                                                  <span><b>356,831</b></span>
-                                                  <span>Total Users</span>
+                                             <div class="pl-3">
+                                                  <span class="block text-white"><b>356,831</b></span>
+                                                  <span class="block text-white">Total Users</span>
                                              </div>
                                         </div>
                                    </div>
-                                   <div class="col-lg-4 col-md-4 my-2">
-                                        <div class="stat-card">
-                                             <div class="stat-card-left">
-                                                  <span>
+                                   <div class="basis-1/3 my-2">
+                                        <div class="flex justify-center items-center">
+                                             <div class="">
+                                                  <span class="w-14 h-14 rounded-full flex justify-center items-center bg-white text-blue-800 text-2xl">
                                                        <i class="fal fa-pencil"></i>
                                                   </span>
                                              </div>
-                                             <div class="stat-card-right ps-3">
-                                                  <span><b>314,575</b></span>
-                                                  <span>Tasks Completed</span>
+                                             <div class="pl-3">
+                                                  <span class="block text-white"><b>314,575</b></span>
+                                                  <span class="block text-white">Tasks Completed</span>
                                              </div>
                                         </div>
                                    </div>
@@ -457,37 +483,38 @@
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-3 py-5 text-center">
                                         <img src="assets/img/w-1.png" alt="" width="60px" height="90px" class="mx-auto">
-                                        <h6 class="m-0 py-3">Cashouts starting at $0.01</h6>
+                                        <h6 class="py-3">Cashouts starting at $0.01</h6>
                                    </div>
                               </div>
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-3 py-5 text-center">
                                         <img src="assets/img/w-2.png" alt="" width="100px" height="90px" class="mx-auto">
-                                        <h6 class="m-0 py-3">Earn $1.00 every 5-10 minutes by completing offers on Monetars.</h6>
+                                        <h6 class="py-3">Earn $1.00 every 5-10 minutes by completing offers on
+                                             Monetars.</h6>
                                    </div>
                               </div>
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-3 py-4 text-center">
                                         <img src="assets/img/w-3.png" alt="" class="mx-auto">
-                                        <h6 class="m-0 pt-3">Instant Cashouts</h6>
+                                        <h6 class="pt-3">Instant Cashouts</h6>
                                    </div>
                               </div>
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-4 py-4 text-center">
                                         <img src="assets/img/w-4.png" alt="" class="mx-auto">
-                                        <h6 class="m-0 pt-3">Highest Cashouts</h6>
+                                        <h6 class="pt-3">Highest Cashouts</h6>
                                    </div>
                               </div>
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-4 py-4 text-center">
                                         <img src="assets/img/w-5.png" alt="" class="mx-auto">
-                                        <h6 class="m-0 pt-3">Verified task</h6>
+                                        <h6 class="pt-3">Verified task</h6>
                                    </div>
                               </div>
                               <div class="col-lg-6 col-md-6 my-3">
                                    <div class="card border-0 round px-4 py-4 text-center">
                                         <img src="assets/img/w-6.png" alt="" class="mx-auto">
-                                        <h6 class="m-0 pt-3">24/7 Support</h6>
+                                        <h6 class="pt-3">24/7 Support</h6>
                                    </div>
                               </div>
                          </div>
@@ -547,63 +574,62 @@
                               </div>
                               <div class="row">
                                    <div class="col-lg-4 mt-2 footer-box-left">
-                                        <p class="m-0">Monetars is a project where<br>
+                                        <p class=">Monetars is a project where<br>
                                              online testers have the<br>
                                              opportunity to complete various<br>
                                              online assignments and receive<br>
                                              money for it.</p>
-                                        <div class="social-links mt-3">
+                                        <div class=" social-links mt-3">
                                              <span><a href="#"><i class="fab fa-facebook-f"></i></a></span>
                                              <span><a href="#"><i class="fab fa-instagram"></i></a></span>
                                              <span><a href="#"><i class="fab fa-twitter"></i></a></span>
                                              <span><a href="#"><i class="fab fa-discord"></i></a></span>
                                              <span><a href="#"><i class="fal fa-robot"></i></a></span>
-                                        </div>
                                    </div>
-                                   <div class="col-lg-8 mt-2 footer-box-right">
-                                        <div class="row">
-                                             <div class="col-md-4 col-sm-6">
-                                                  <h5 class="mb-3">Account</h5>
-                                                  <ul>
-                                                       <li class="mb-2">
-                                                            <a href="#login-modal" data-bs-toggle="modal">Login</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="#register-modal" data-bs-toggle="modal">Register</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="faq.html">FAQ</a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                             <div class="col-md-4 col-sm-6">
-                                                  <h5 class="mb-3">Company</h5>
-                                                  <ul>
-                                                       <li class="mb-2">
-                                                            <a href="about.html">About us</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="blogs.html">Blog</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="contact.html">Contact</a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
-                                             <div class="col-md-4 col-sm-6">
-                                                  <h5 class="mb-3">Legal</h5>
-                                                  <ul>
-                                                       <li class="mb-2">
-                                                            <a href="privacy.html">Privacy</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="terms.html">Terms and Conditions</a>
-                                                       </li>
-                                                       <li class="mb-2">
-                                                            <a href="imprint.html">Imprint</a>
-                                                       </li>
-                                                  </ul>
-                                             </div>
+                              </div>
+                              <div class="col-lg-8 mt-2 footer-box-right">
+                                   <div class="row">
+                                        <div class="col-md-4 col-sm-6">
+                                             <h5 class="mb-3">Account</h5>
+                                             <ul>
+                                                  <li class="mb-2">
+                                                       <a href="#login-modal" data-bs-toggle="modal">Login</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="#register-modal" data-bs-toggle="modal">Register</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="faq.html">FAQ</a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                             <h5 class="mb-3">Company</h5>
+                                             <ul>
+                                                  <li class="mb-2">
+                                                       <a href="about.html">About us</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="blogs.html">Blog</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="contact.html">Contact</a>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                             <h5 class="mb-3">Legal</h5>
+                                             <ul>
+                                                  <li class="mb-2">
+                                                       <a href="privacy.html">Privacy</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="terms.html">Terms and Conditions</a>
+                                                  </li>
+                                                  <li class="mb-2">
+                                                       <a href="imprint.html">Imprint</a>
+                                                  </li>
+                                             </ul>
                                         </div>
                                    </div>
                               </div>
@@ -613,10 +639,10 @@
                          <div class="test-box col-lg-8 mx-auto">
                               <div class="row">
                                    <div class="col-md-6 mt-2 text-lg-start text-md-start text-sm-center">
-                                        <p class="m-0 text-grey copy-text">Monetars.com | All rights reserved</p>
+                                        <p class="text-grey copy-text">Monetars.com | All rights reserved</p>
                                    </div>
                                    <div class="col-md-6 mt-2 text-lg-end text-md-end text-sm-center">
-                                        <p class="m-0 text-grey copy-text">&copy; Copyright 2020 - 2022</p>
+                                        <p class="text-grey copy-text">&copy; Copyright 2020 - 2022</p>
                                         <!--                <div class="d-flex justify-content-end align-items-center flags-box">-->
                                         <!--                    <span class="ms-5">-->
                                         <!--                        <img src="assets/img/germany.png" alt="Germany Flag" width="30px" height="30px" class="rounded-circle">-->
@@ -642,227 +668,266 @@
                </footer>
                <!--Footer Ends-->
           </div>
-          <div class="child-2">
+
+          <div class="bg-indigo-50 hidden" style="width: 320px;display: block;">
                <!--SideBox Starts -->
-               <div class="sidebox shadow-sm">
-                    <div class="overlay">
-                         <span class="toggle-box" id="btn-close"><i class="fal fa-arrow-right"></i></span>
-                         <div class="up-header px-4">
-                              <div class="bg-white rounded-pill d-flex justify-content-between">
-                                   <div class=" w-50 sidebox-dropdown">
-                                        <div class="dropdown">
-                                             <button class="btn btn-primary btn-dropdown d-flex justify-content-start align-items-center btn-general active" type="button" id="dropdownMenuButton2"
-                                                  data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 50rem !important;">
-                                                  <i class="fal fa-globe" style="font-size: 18px;color: var(--white)"></i>
-                                                  <span class="ms-2">General</span>
-                                                  <i class="fal fa-chevron-down ms-2" style="font-size: 12px;color: var(--white)"></i>
+               <div class="fixed right-0 top-[140px] w-[300px] h-auto rounded-bl-md rounded-tl-md z-50 shadow-md bg-white">
+                    <div class="relative w-full h-full bg-transparent">
+                         <span class="absolute -left-9 top-0 w-9 h-9 bg-blue-800 rounded-bl-md rounded-tl-md flex justify-center items-center" id="btn-close"><i
+                                   class="fal fa-arrow-left text-white font-bold"></i></span>
+                         <!-- 
+                         <span class="absolute -left-9 top-0 w-9 h-9 bg-blue-800 rounded-bl-md rounded-tl-md flex justify-center items-center" id="btn-close"><i class="fal fa-arrow-right hidden  text-white font-bold"></i></span>
+                          -->
+                         <div class="bg-indigo-200 text-center w-full h-11 flex justify-center items-center px-6 py-4">
+                              <div class="bg-white rounded-3xl flex justify-center d-flex justify-content-between w-full">
+                                   <div class="w-1/2">
+                                        <div class="relative">
+                                             <button onclick="displayToggle(dropdownMenu4)"
+                                                  class="bg-blue-800 text-white border border-blue-800 text-center align-middle py-2  px-3 rounded-3xl flex items-center text-base">
+                                                  <i class="fal fa-globe"></i>
+                                                  <span class="mx-2">General</span>
+                                                  <i class="fal fa-chevron-down ms-2"></i>
                                              </button>
-                                             <ul class="dropdown-menu border-0  shadow" aria-labelledby="dropdownMenuButton2">
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <i class="fal fa-globe"></i><span class="ms-2">General (70)</span>
+                                             <ul id="dropdownMenu4" style="display: none"
+                                                  class="absolute z-50 w-40 p-2 text-base text-left text-neutral-500 bg-white rounded-md translate-y-0 shadow-md">
+                                                  <li><a class="text-gray-500 text-xs block w-full py-1 px-4 whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href=" #">
+                                                            <i class="fal fa-globe text-sm"></i><span class="ml-2">General
+                                                                 (70)</span>
                                                        </a></li>
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <i class="fal fa-star"></i><span class="ms-2">VIP (704)</span>
+                                                  <li><a class="text-gray-500 text-xs block w-full py-1 px-4 whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href=" #">
+                                                            <i class="fal fa-star text-sm"></i><span class="ml-2">VIP
+                                                                 (704)</span>
                                                        </a></li>
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <img src="assets/img/germany.png"><span class="ms-2">Germany (102)</span>
+                                                  <li><a class="text-gray-500 text-xs w-full flex items-cente py-1 px-4 font-normal whitespace-nowrap bg-white hover:bg-blue-800 hover:text-white botto href="
+                                                            #">
+                                                            <img src="assets/img/germany.png"><span class="ml-2 inline-block">Germany
+                                                                 (102)</span>
                                                        </a></li>
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <img src="assets/img/spain.png"><span class="ms-2">Spain (92)</span>
+                                                  <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center" href="#">
+                                                            <img src="assets/img/spain.png"><span class="ml-2">Spain
+                                                                 (92)</span>
                                                        </a></li>
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <img src="assets/img/france.png"><span class="ms-2">France (74)</span>
+                                                  <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center" href="#">
+                                                            <img src="assets/img/france.png"><span class="ml-2">France
+                                                                 (74)</span>
                                                        </a></li>
-                                                  <li><a class="dropdown-item" href="#">
-                                                            <img src="assets/img/italy.png"><span class="ms-2">Italy (27)</span>
+                                                  <li><a class="text-gray-500 text-xs w-full py-1 px-4 font-nowrap bg-white hover:bg-blue-800 hover:text-white bottoflex items-center" href="#">
+                                                            <img src="assets/img/italy.png"><span class="ml-2">Italy
+                                                                 (27)</span>
                                                        </a></li>
                                              </ul>
                                         </div>
                                    </div>
-                                   <div class="w-50">
-                                        <a class="btn ms-2 support-btn">Support</a>
+                                   <div class="w-1/2">
+                                        <a class="bg-white text-neutral-500 text-center align-middle py-2  px-8 rounded-3xl flex items-center text-base cursor-pointer">Support</a>
                                    </div>
                               </div>
                          </div>
-                         <div class="support-box">
-                              <div class="d-flex justify-content-between align-items-center mb-2">
-                                   <span class="email">@MonetarsUpoort</span>
-                                   <span class="time">09:23PM</span>
+                         <div class="pt-4 pl-4 pb-12 pr-4 hidden">
+                              <div class="flex justify-between items-center mb-2">
+                                   <span class="text-base">@MonetarsUpoort</span>
+                                   <span class="text-sm">09:23PM</span>
                               </div>
                               <div class="mb-2">
-                                   <p>Send us a support message at any time and we'll get back to you as soon as possible!</p>
+                                   <p class="text-gray-500 text-sm">Send us a support message at any time and we'll
+                                        get back to you as soon as
+                                        possible!</p>
                               </div>
                               <div>
-                                   <p>Tip: If you are missing coins, please check the FAQ section before contacting support.</p>
+                                   <p class="text-gray-500 text-sm">Tip: If you are missing coins, please check the
+                                        FAQ section before contacting
+                                        support.</p>
                               </div>
                          </div>
-                         <div class="up-body">
-                              <div class="child">
+                         <div class="w-full p-2 overflow-y-scroll h-80 bg-white">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
-                              <div class="child">
+                              <div class="p-2 flex justify-between">
                                    <div>
-                                        <div class="sub-child">
+                                        <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
                                                        <a href="#user-modal" data-bs-toggle="modal">
-                                                            <img src="assets/img/Ellipse 53.png" class="shadow-sm">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
                                              </div>
-                                             <div class="ps-3">
-                                                  <span class="name">John</span>
-                                                  <span class="txt">Lorem ipsum dolor sit.</span>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
                                              </div>
                                         </div>
                                    </div>
                                    <div>
-                                        <span class="time">09:23</span>
+                                        <span class="text-sm block">09:23</span>
                                    </div>
                               </div>
+                              <div class="p-2 flex justify-between">
+                                   <div>
+                                        <div class="flex justify-start items-center">
+                                             <div>
+                                                  <span>
+                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                            <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
+                                                       </a>
+                                                  </span>
+                                             </div>
+                                             <div class="pl-3">
+                                                  <span class="p-0 block text-base">John</span>
+                                                  <span class="text-sm block">Lorem ipsum dolor sit.</span>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div>
+                                        <span class="text-sm block">09:23</span>
+                                   </div>
+                              </div>
+
+
                          </div>
-                         <div class="up-footer">
+                         <div class="h-[55px] absolute -bottom-4 left-0 py-0 px-3 w-full bg-white">
                               <form autocomplete="off">
-                                   <div class="input-box">
-                                        <input type="text" placeholder="Say Something...">
-                                        <span><i class="fal fa-smile"></i></span>
+                                   <div class="flex justify-between items-center bg-slate-200 py-2 px-3 rounded-md">
+                                        <input class="w-11/12 border-0 text-black py-1 px-2 bg-transparent font-sm" type="text" placeholder="Say Something...">
+                                        <span class="w-[9%] bg-transparent flex justify-center items-center text-base"><i class="fal fa-smile"></i></span>
                                    </div>
                               </form>
                          </div>
@@ -912,7 +977,7 @@
                               </a>
                          </li>
                     </ul>
-                    <div class="absolute bottom-0 left-0 py-2 pl-1">
+                    <div class="absolute bottoleft-0 py-2 pl-1">
                          <a class="inline-block py-1 px-3 text-base rounded-md bg-blue-800 text-white" href="#">Logout</a>
                     </div>
                </div>
@@ -921,13 +986,18 @@
      <!-- Canvas Ends -->
 
      <!-- Mobile Nav Starts-->
-     <div class="fixed block bottom-0 left-0 p-1 w-screen h-20 bg-indigo-200 z-50">
+     <div class="fixed md:hidden block bottom-0 left-0 p-1 w-screen h-20 bg-indigo-200 z-50">
           <div>
                <ul class="flex justify-between bg-indigo-200">
-                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="earn.html"><span class="block text-center"><i class="fal fa-hands-usd text-base text-neutral-500"></i></span>Earn</a></li>
-                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="withdraw.html"><span class="block text-center"><i class="fal fa-credit-card-front text-base text-neutral-500"></i></span>Withdraw</a></li>
-                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="leaders.html"><span class="block text-center"><i class="fal fa-trophy text-base text-neutral-500"></i></span>Leaders</a></li>
-                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="javascript:void(0);" class="btn-mobile-open"><span class="block text-center"><i class="fal fa-comment-alt text-base text-neutral-500"></i></span>Chat</a></li>
+                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="earn.html"><span class="block text-center"><i
+                                        class="fal fa-hands-usd text-base text-neutral-500"></i></span>Earn</a></li>
+                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="withdraw.html"><span class="block text-center"><i
+                                        class="fal fa-credit-card-front text-base text-neutral-500"></i></span>Withdraw</a>
+                    </li>
+                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="leaders.html"><span class="block text-center"><i
+                                        class="fal fa-trophy text-base text-neutral-500"></i></span>Leaders</a></li>
+                    <li class="w-1/5 py-2 mx-1 text-center rounded"><a class="text-sm text-neutral-500" href="javascript:void(0);" class="btn-mobile-open"><span class="block text-center"><i
+                                        class="fal fa-comment-alt text-base text-neutral-500"></i></span>Chat</a></li>
                </ul>
           </div>
      </div>
@@ -952,7 +1022,7 @@
                                    <div class="col-lg-8 px-4">
                                         <div>
                                              <form method="post" name="login-form" id="login-form" autocomplete="off">
-                                                  <h3 class="form-head m-0 mb-4">Sign in</h3>
+                                                  <h3 class="form-head mb-4">Sign in</h3>
                                                   <div class="form-group mb-3">
                                                        <label class="mb-1" for="email">Email Address</label>
                                                        <input type="email" class="form-control" id="email" name="email" required>
@@ -1006,7 +1076,7 @@
                                    <div class="col-lg-8 px-4">
                                         <div>
                                              <form method="post" name="register-form" id="register-form" autocomplete="off">
-                                                  <h3 class="form-head m-0 mb-4">Create your Account</h3>
+                                                  <h3 class="form-head mb-4">Create your Account</h3>
                                                   <div class="form-group mb-3">
                                                        <label class="mb-1" for="email">Email Address</label>
                                                        <input type="email" class="form-control" id="email" name="email" required>
@@ -1026,7 +1096,8 @@
                                                   <div class="form-check mb-4">
                                                        <input class="form-check-input" type="checkbox" required value="" id="terms" name="terms">
                                                        <label class="form-check-label" for="terms">
-                                                            <small>By signing up, you are agreeing t our <a href="#">Privacy Policy</a> and <a href="#">Term of Service.</a></small>
+                                                            <small>By signing up, you are agreeing t our <a href="#">Privacy Policy</a> and <a href="#">Term
+                                                                      of Service.</a></small>
                                                        </label>
                                                        <label for="terms" id="terms-error" style="display: none;" class="error"></label>
                                                   </div>
@@ -1063,7 +1134,7 @@
                                    <div class="col-lg-8 px-4">
                                         <div>
                                              <form method="post" name="login-form" id="forgot-form" autocomplete="off">
-                                                  <h3 class="form-head m-0 mb-4">Recover Password</h3>
+                                                  <h3 class="form-head mb-4">Recover Password</h3>
                                                   <div class="form-group mb-3">
                                                        <label class="mb-1" for="email_address">Email Address</label>
                                                        <input type="email" class="form-control" id="email_address" name="email_address" required>
@@ -1101,7 +1172,7 @@
                                    <div class="col-lg-8 px-4">
                                         <div>
                                              <form method="post" name="register-form" id="reset-form" autocomplete="off">
-                                                  <h3 class="form-head m-0 mb-4">Reset your Account Password</h3>
+                                                  <h3 class="form-head mb-4">Reset your Account Password</h3>
                                                   <div class="form-group mb-4">
                                                        <label class="mb-1" for="new_password">Password</label>
                                                        <input type="password" class="form-control" id="new_pass" name="new_password" required>
@@ -1134,13 +1205,13 @@
                     <div class="modal-body">
                          <div class="container-fluid ">
                               <div class="row px-4 pb-3">
-                                   <h5 class="m-0 mb-1" style="font-family: med;">User Profile</h5>
+                                   <h5 class="mb-1" style="font-family: med;">User Profile</h5>
                                    <div class="col-lg-5 profile-box px-1">
                                         <div class="">
                                              <div class="text-center">
                                                   <img src="assets/img/Ellipse 55.png">
                                              </div>
-                                             <h5 class="text-center m-0 py-4">El Bronco VC CBE <span></span></h5>
+                                             <h5 class="text-center py-4">El Bronco VC CBE <span></span></h5>
                                              <div class="stats">
                                                   <div class="text-center">
                                                        <span class="num">142</span>
@@ -1159,8 +1230,8 @@
                                    </div>
                                    <div class="col-lg-7 ">
                                         <div class="graph-box p-2">
-                                             <h5 class="m-0">Earnings</h5>
-                                             <p class="m-0">Last 7 days</p>
+                                             <h5 class=">Earnings</h5>
+                                             <p class=">Last 7 days</p>
                                         </div>
                                         <div class="p-2" id="earning-graph" style="height: 300px;">
                                         </div>
@@ -1172,6 +1243,7 @@
           </div>
      </div>
      <!-- User Profile Ends -->
+
      <!-- Promo Modal Starts -->
      <div class="modal fade" id="promo-modal" tabindex="-1">
           <div class="modal-dialog modal-lg modal-dialog-scrollable">

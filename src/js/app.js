@@ -1,8 +1,9 @@
 function displayToggle(id) {
-     if (id.style.display === "none") {
-          id.style.display = "block";
-     } else {
+     if (id.style.display === "block") {
           id.style.display = "none";
+     } else {
+          id.style.display = "block";
+          id.classList.remove("hidden");
      }
 }
 
