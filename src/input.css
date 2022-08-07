@@ -24,4 +24,20 @@
   .roboto_font {
     font-family: "Roboto", sans-serif;
   }
+  .or::before {
+    content: "";
+    display: inline-block;
+    width: 45%;
+    height: 1px;
+    background-color: #f8f9fa;
+    margin-bottom: 3px;
+  }
+  .or::after {
+    content: "";
+    display: inline-block;
+    width: 45%;
+    height: 1px;
+    background-color: #f8f9fa;
+    margin-bottom: 3px;
+  }
 }
