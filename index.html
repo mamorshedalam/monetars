@@ -110,7 +110,7 @@
                          </div>
                     </div>
                     <div>
-                         <button onclick="blockToggle(loginModal)" class="inline-block py-1 px-3 text-base text-neutral-800">Login</button>
+                         <button onclick="blockToggle(logModal)" class="inline-block py-1 px-3 text-base text-neutral-800">Login</button>
                          <button onclick="blockToggle(registerModal)" class="inline-block py-1 px-3 text-base text-white bg-blue-800 hover:bg-blue-900">Register</button>
                     </div>
                </div>
@@ -563,10 +563,10 @@
                                                   <h5 class="text-xl mb-3 font-medium">Account</h5>
                                                   <ul>
                                                        <li class="mb-2">
-                                                            <a class="text-neutral-500 hover:text-black" href="#login-modal">Login</a>
+                                                            <a onclick="blockToggle(logModal)" class="text-neutral-500 hover:text-black" href="#login-modal">Login</a>
                                                        </li>
                                                        <li class="mb-2">
-                                                            <a class="text-neutral-500 hover:text-black" href="#register-modal">Register</a>
+                                                            <a onclick="blockToggle(registerModal)" class="text-neutral-500 hover:text-black" href="#register-modal">Register</a>
                                                        </li>
                                                        <li class="mb-2">
                                                             <a class="text-neutral-500 hover:text-black" href="faq.html">FAQ</a>
@@ -614,24 +614,6 @@
                                    </div>
                                    <div class="md:basis-1/2 basis-full px-2 mt-2 md:text-end text-center">
                                         <p class="text-neutral-500">&copy; Copyright 2020 - 2022</p>
-                                        <!--                <div class="d-flex justify-content-end align-items-center flags-box">-->
-                                        <!--                    <span class="ms-5">-->
-                                        <!--                        <img src="assets/img/germany.png" alt="Germany Flag" width="30px" height="30px" class="rounded-circle">-->
-                                        <!--                        Germany-->
-                                        <!--                    </span>-->
-                                        <!--                    <span class="ms-5">-->
-                                        <!--                        <img src="assets/img/usa.png" alt="USA Flag" width="30px" height="30px" class="rounded-circle">-->
-                                        <!--                        USA-->
-                                        <!--                    </span>-->
-                                        <!--                    <span class="ms-5">-->
-                                        <!--                        <img src="assets/img/spain.png" alt="Spain Flag" width="30px" height="30px" class="rounded-circle">-->
-                                        <!--                        Spain-->
-                                        <!--                    </span>-->
-                                        <!--                    <span class="ms-5">-->
-                                        <!--                        <img src="assets/img/france.png" alt="France Flag" width="30px" height="30px" class="rounded-circle">-->
-                                        <!--                        France-->
-                                        <!--                    </span>-->
-                                        <!--                </div>-->
                                    </div>
                               </div>
                          </div>
@@ -979,11 +961,11 @@
      <!-- Mobile Nav Ends-->
 
      <!-- Login Modal Starts -->
-     <div class="fixed hidden top-0 left-0 z-50 w-full h-full overflow-x-hidden overflow-y-auto bg-[rgba(0,0,0,0.5)]" id="loginModal">
+     <div class="fixed hidden top-0 left-0 z-50 w-full h-full overflow-x-hidden overflow-y-auto bg-[rgba(0,0,0,0.5)]" id="logModal">
           <div class="relative md:w-[800px] w-[500px] my-7 mx-auto">
                <div class="max-h-full overflow-hidden rounded-xl relative bg-white border border-[rgba(0,0,0,.2)]">
                     <div class="flex shrink-0 items-center justify-between p-4 rounded-tl-md rounded-tr-md">
-                         <button onclick="blockToggle(loginModal)" class="p-2 -mt-2 -mr-2 -mb-2 ml-auto"><i class="text-xl text-neutral-500 fas fa-times"></i></button>
+                         <button onclick="blockToggle(logModal)" class="p-2 -mt-2 -mr-2 -mb-2 ml-auto"><i class="text-xl text-neutral-500 fas fa-times"></i></button>
                     </div>
                     <div class="overflow-y-auto relative flex-1 p-1">
                          <div class="w-full">
