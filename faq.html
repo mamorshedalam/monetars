@@ -387,8 +387,8 @@
                                 <button class="w-full py-3 text-center tracking-wider rounded-none text-neutral-500 border-b-2 border-transparent" onclick="accordionToggle(this, account)" role="button">Accounts</button>
                             </li>
                         </ul>
-                        <div id="myTabContent">
-                            <div class="py-4 block" id="faq">
+                        <div>
+                            <div class="py-4 block" role="TabContent" id="faq">
                                 <div id="accordionFlushExample">
                                     <div class="rounded mb-6 p-4 bg-white">
                                         <h2 class="text-[2rem]" id="flush-headingOne">
@@ -443,11 +443,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="py-2 hidden" id="coins">Reedeming coins</div>
-                            <div class="py-2 hidden" id="earning">...</div>
-                            <div class="py-2 hidden" id="contact">...</div>
-                            <div class="py-2 hidden" id="policies">...</div>
-                            <div class="py-2 hidden" id="account">...</div>
+                            <div class="py-2 hidden" role="TabContent" id="coins">Reedeming coins</div>
+                            <div class="py-2 hidden" role="TabContent" id="earning">...</div>
+                            <div class="py-2 hidden" role="TabContent" id="contact">...</div>
+                            <div class="py-2 hidden" role="TabContent" id="policies">...</div>
+                            <div class="py-2 hidden" role="TabContent" id="account">...</div>
                         </div>
                     </div>
                 </div>

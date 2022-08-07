@@ -19,7 +19,7 @@ function blockToggle(id) {
 }
 
 function accordionToggle(btn, id) {
-     const sections = document.getElementById("myTabContent").children;
+     const sections = document.querySelectorAll('[role="TabContent"]');
      for (let i = 0; i < sections.length; i++) {
           const section = sections[i];
           section.classList.add("hidden");
