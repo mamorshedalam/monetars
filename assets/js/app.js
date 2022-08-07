@@ -19,15 +19,16 @@ function blockToggle(id) {
 }
 
 function accordionToggle(btn, id) {
-     const roles = id.getAttribute("role");
-     const sections = document.querySelectorAll(`[role="${roles}"]`);
+     const sectionRoles = id.getAttribute("role");
+     const sections = document.querySelectorAll(`[role="${sectionRoles}"]`);
      for (let i = 0; i < sections.length; i++) {
           const section = sections[i];
           section.classList.add("hidden");
           section.classList.remove("block");
      }
 
-     const buttons = document.querySelectorAll('[role="button"]');
+     const buttonRoles = btn.getAttribute("role");
+     const buttons = document.querySelectorAll(`[role="${buttonRoles}"]`);
      for (let i = 0; i < buttons.length; i++) {
           const button = buttons[i];
           if (button.classList.contains("bg-blue-800")) {
