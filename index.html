@@ -32,7 +32,7 @@
                <a class="pt-1 pb-1 mr-4 text-xl whitespace-nowrap" href="index.html">
                     <img src="assets/img/Monester-logo.png" alt="Monster Logo" style="width:200px; height: 50px">
                </a>
-               <button onclick="displayToggle(dropdownMenu3)" class="xl:hidden block py-1 px-3 text-xl">
+               <button onclick="blockToggle(dropdownMenu3)" class="xl:hidden block py-1 px-3 text-xl">
                     <span class="flex w-6 h-6 align-middle justify-center items-center ">
                          <i class="fal fa-align-right text-blue-800"></i>
                     </span>
@@ -70,10 +70,10 @@
                     </div>
                     <div class="my-1">
                          <div class="relative">
-                              <button onclick="displayToggle(dropdownMenu1)" class="flex py-1 px-2 text-sm justify-start items-center bg-indigo-200">
+                              <button onclick="blockToggle(dropdownMenu1)" class="flex py-1 px-2 text-sm justify-start items-center bg-indigo-200">
                                    <img class="w-9 h-9" src="assets/img/Ellipse 54.png"><span class="mx-2">MacMa</span><i class="fal fa-chevron-down"></i>
                               </button>
-                              <ul style="display: none;" class="absolute top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50" style="min-width: 130px !important;"
+                              <ul class="absolute hidden top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50" style="min-width: 130px !important;"
                                    id="dropdownMenu1">
                                    <li><a class="block w-full py-1 px-4 text-sm clear-both whitespace-nowrap text-neutral-500 hover:bg-blue-800 hover:text-white" href="profile.html"><i
                                                   class="fal fa-user-circle mr-2 text-neutral-500"></i>User Profile</a>
@@ -85,7 +85,7 @@
                     </div>
                     <div>
                          <div class="relative">
-                              <button onclick="displayToggle(dropdownMenu2)" class="flex justify-center items-center py-1 px-3">
+                              <button onclick="blockToggle(dropdownMenu2)" class="flex justify-center items-center py-1 px-3">
                                    <div>
                                         <img src="assets/img/united-states.png" class="inline-block rounded">
                                    </div>
@@ -93,7 +93,7 @@
                                         <span class="ml-2"><i class="fal fa-chevron-down" style="font-size: 10px;font-weight: bold;"></i></span>
                                    </div>
                               </button>
-                              <ul style="display: none;" class="absolute w-40 py-2 top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50" id="dropdownMenu2">
+                              <ul class="absolute hidden w-40 py-2 top-full left-0 mt-1 text-left text-base rounded shadow-md text-neutral-800 bg-white z-50" id="dropdownMenu2">
                                    <li><a class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500 hover:bg-blue-800 hover:text-white" href="#">
                                              <img src="assets/img/united-states.png" class="inline-block rounded"><span class="ml-2">United States</span>
                                         </a></li>
@@ -119,7 +119,7 @@
           <div class="md:hidden flex p-2 bg-white justify-between items-center z-50">
                <div>
                     <div>
-                         <button onclick="sidebarToggle(sidebarMenu1)" class="relative mx-1 py-1 px-2 text-sm bg-white">
+                         <button onclick="flexToggle(sidebarMenu1)" class="relative mx-1 py-1 px-2 text-sm bg-white">
                               <i class="fal fa-align-left text-xl text-blue-800"></i>
                          </button>
                     </div>
@@ -156,160 +156,120 @@
           </div>
 
           <!-- Slider starts-->
-          <div class="relative lg:block hidden p-2 bg-indigo-50">
-               <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-3">
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'>
-                         <span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+          <div class="relative p-2 bg-indigo-50">
+               <div class="slider">
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-
-
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <!-- <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
-                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span
-                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
                     </div>
-                    <div class="shadow-sm rounded-md bg-blue-800 text-white">
-                         <div class="flex items-center justify-between h-full" data-bs-toggle="tooltip"
-                              data-bs-placement="bottom" data-bs-html="true" title="<div class='yeah'><span class='left'>Offername:</span><span class='right'>Daily Bonus (Monetars)</span></div>
-                    <div class='yeah'><span class='left'>Offerwall:</span><span class='right'>Monetars</span></div>
-                    <div class='yeah'><span class='left'>Reward</span><span class='right'>33 coins</span></div>">
-                              <div class="bg-[#0B1E5C] h-full flex items-center rounded-md p-3">
-                                   <a href="#user-modal" data-bs-toggle="modal" class="block">
-                                        100 <span class="bg-yellow-500 text-gray-500 rounded-full h-4 w-4 inline-flex">
-                                             <i class="fal fa-usd-circle"></i> </span>
+                    <div class="w-full">
+                         <div class="relative flex justify-between items-center rounded-lg mr-2 bg-blue-800">
+                              <div class="w-2/5 py-2 rounded-lg text-center bg-indigo-800 text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span>100<i class="fal fa-usd-circle rounded-full ml-1 bg-yellow-500 text-neutral-500"></i></span>
                                    </a>
                               </div>
-                              <div class="pr-5">
-                                   <a href="#user-modal" data-bs-toggle="modal">
-                                        <span
-                                             class="w-6 h-6 rounded-full bg-[#FF4500] inline-block text-center">s</span>
-                                        Somuch...
+                              <div class="w-3/5 p-2 text-left text-white">
+                                   <a class="inline-block text-white" href="#user-modal">
+                                        <span><span class="w-6 h-6 mr-1 inline-block text-center rounded-full text-base text-white bg-orange-600">s</span>Somuch...</span>
                                    </a>
                               </div>
                          </div>
-                    </div> -->
-
+                    </div>
                </div>
           </div>
           <!-- Slider ends-->
@@ -326,27 +286,27 @@
                </div>
                <div class="hidden">
                     <span>
-                         <a href="#user-modal" data-bs-toggle="modal">
+                         <a href="#user-modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
                          </a>
                     </span>
                     <span>
-                         <a href="#user-modal" data-bs-toggle="modal">
+                         <a href="#user-modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
                          </a>
                     </span>
                     <span>
-                         <a href="#user-modal" data-bs-toggle="modal">
+                         <a href="#user-modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
                          </a>
                     </span>
                     <span>
-                         <a href="#user-modal" data-bs-toggle="modal">
+                         <a href="#user-modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
                          </a>
                     </span>
                     <span>
-                         <a href="#user-modal" data-bs-toggle="modal">
+                         <a href="#user-modal">
                               <img src="assets/img/Ellipse 53.png" class="shadow-sm">
                          </a>
                     </span>
@@ -752,7 +712,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -772,7 +732,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -792,7 +752,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -812,7 +772,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -832,7 +792,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -852,7 +812,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -872,7 +832,7 @@
                                         <div class="flex justify-start items-center">
                                              <div>
                                                   <span>
-                                                       <a href="#user-modal" data-bs-toggle="modal">
+                                                       <a href="#user-modal">
                                                             <img src="assets/img/Ellipse 53.png" class="w-12 h-12 rounded-full object-cover object-top shadow-md">
                                                        </a>
                                                   </span>
@@ -945,14 +905,14 @@
      </div>
 
      <!-- Canvas Starts -->
-     <div id="sidebarMenu1" style="display: none;" class="fixed flex-col bottom-0 top-0 left-0 w-80 visible bg-white z-50">
+     <div id="sidebarMenu1" class="fixed hidden flex-col bottom-0 top-0 left-0 w-80 visible bg-white z-50">
           <div class="flex justify-between items-center p-4">
                <div>
                     <a class="mr-4 text-xl whitespace-nowrap" href="index.html">
                          <img src="assets/img/Monester-Logo.png" alt="Monster Logo" style="width:200px; height: 50px">
                     </a>
                </div>
-               <button onclick="sidebarToggle(sidebarMenu1)" class="p-2 -mt-2 -ml-2 -mr-2"><i class="text-xl text-neutral-500 fas fa-times"></i></button>
+               <button onclick="flexToggle(sidebarMenu1)" class="p-2 -mt-2 -ml-2 -mr-2"><i class="text-xl text-neutral-500 fas fa-times"></i></button>
           </div>
           <div class="relative grow p-4 overflow-y-auto">
                <div class="w-full py-1 bg-white ">
@@ -1291,7 +1251,7 @@
      <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.0.0/highcharts.js" integrity="sha512-//WD7Gq/302cFYMIeO2Y8ZCkrYDs/yOpZvSBjhc4QXeLuBChYmBDQg7ydKQLNAmJiuPZgccT85ZlL9s/ZghLBg=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <script src="assets/js/main.js"></script>
-     <script src="src/js/app.js"></script>
+     <script src="assets/js/app.js"></script>
 </body>
 
 </html>

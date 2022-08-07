@@ -1,17 +1,10 @@
-// function displayToggle(id) {
-//      if (id.style.display === "block") {
-//           id.style.display = "none";
-//      } else {
-//           id.style.display = "block";
-//           id.classList.remove("hidden");
-//      }
-// }
-
-function sidebarToggle(id) {
-     if (id.style.display === "flex") {
-          id.style.display = "none";
+function flexToggle(id) {
+     if (id.classList.contains("hidden")) {
+          id.classList.add("flex");
+          id.classList.remove("hidden");
      } else {
-          id.style.display = "flex";
+          id.classList.add("hidden");
+          id.classList.remove("flex");
      }
 }
 
