@@ -19,7 +19,8 @@ function blockToggle(id) {
 }
 
 function accordionToggle(btn, id) {
-     const sections = document.querySelectorAll('[role="TabContent"]');
+     const roles = id.getAttribute("role");
+     const sections = document.querySelectorAll(`[role="${roles}"]`);
      for (let i = 0; i < sections.length; i++) {
           const section = sections[i];
           section.classList.add("hidden");
@@ -30,7 +31,7 @@ function accordionToggle(btn, id) {
      for (let i = 0; i < buttons.length; i++) {
           const button = buttons[i];
           if (button.classList.contains("bg-blue-800")) {
-               
+
                button.classList.add("bg-white", "text-black");
                button.classList.remove("bg-blue-800", "text-white");
 
