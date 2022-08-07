@@ -389,7 +389,7 @@
                             </ul>
                             <div>
                                 <!-- general tab -->
-                                <div class="py-4 hidden" id="general" role="TabContent">
+                                <div class="py-4" id="general" role="TabContent">
                                     <div class="flex flex-wrap">
                                         <div class="lg:w-1/2 md:w-1/2 w-full my-3 pr-2">
                                             <div class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4 mb-8">
@@ -656,21 +656,21 @@
                                     </div>
                                 </div>
                                 <!-- earning tab -->
-                                <div class=" py-4" id="earnings" role="TabContent" aria-labelledby="earnings-tab">
+                                <div class="hidden py-4" id="earnings" role="TabContent">
                                     <div class="w-full flex flex-wrap bg-white mb-6">
                                         <ul class="w-full flex justify-between mb-6" id="myWithdrawlTab" role="tablist">
                                             <li class="w-1/3" role="presentation">
-                                                <button class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-blue-800  border-blue-800">earnings</button>
+                                                <button onclick="accordionToggle(this, earning)" role="heading1" class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-blue-800  border-blue-800">earnings</button>
                                             </li>
                                             <li class="w-1/3" role="presentation">
-                                                <button class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-neutral-200">held offers</button>
+                                                <button onclick="accordionToggle(this, offer)" role="heading1" class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-transparent">held offers</button>
                                             </li>
                                             <li class="w-1/3" role="presentation">
-                                                <button class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-neutral-200">chargebacks</button>
+                                                <button onclick="accordionToggle(this, chargeback)" role="heading1" class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-transparent">chargebacks</button>
                                             </li>
                                         </ul>
                                         <div class="w-full bg-white px-2" id="myWithdrawlTabContent">
-                                            <div class="py-4" id="earning" role="tabpanel" aria-labelledby="earning-tab">
+                                            <div class="py-4" id="earning" role="tabpanel">
                                                 <div>
                                                     <h6 class="font-medium text-black text-base">Earnings</h6>
                                                     <div class="flex justify-between w-full">
@@ -694,7 +694,9 @@
                                                         <div class="my-4 w-[22%]">
                                                             <div class="pr-1">
                                                                 <label for="offerwall" class="text-sm text-neutral-500 font-light mb-2 block">Offerwall</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="offerwall" id="offerwall">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="offerwall" id="offerwall">
                                                                     <option value="">Show All</option>
                                                                 </select>
                                                             </div>
@@ -703,7 +705,9 @@
                                                             <div class="pr-1">
                                                                 <label for="entries" class="text-sm text-neutral-500 font-light mb-2 block">Entries
                                                                     per page</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="entries" id="entries">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="entries" id="entries">
                                                                     <option value="10">10 Entries</option>
                                                                 </select>
                                                             </div>
@@ -739,20 +743,20 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="d-flex justify-content-end table-pagination">
+                                                    <div class="flex justify-end table-pagination">
                                                         <nav aria-label="Page navigation example">
-                                                            <ul class="pagination">
+                                                            <ul class="mt-2 bg-indigo-200 flex">
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true" class="text-black">&laquo;</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item active"><a class="bg-blue-800 text-white py-2 px-4 text-base" href="#">1</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">2</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">3</a></li>
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Next">
-                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true" class="text-black">&raquo;</span>
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -760,7 +764,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="py-4" id="offer" role="tabpanel" aria-labelledby="offer-tab">
+                                            <div class="py-4 hidden" id="offer" role="tabpanel">
                                                 <div>
                                                     <h6 class="font-medium text-black text-base">Held Offers</h6>
                                                     <div class="flex justify-between w-full">
@@ -784,7 +788,9 @@
                                                         <div class="my-4 w-[22%]">
                                                             <div class="pr-1">
                                                                 <label for="offerwall" class="text-sm text-neutral-500 font-light mb-2 block">Offerwall</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="offerwall" id="offerwall">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="offerwall" id="offerwall">
                                                                     <option value="">Show All</option>
                                                                 </select>
                                                             </div>
@@ -793,7 +799,9 @@
                                                             <div class="pr-1">
                                                                 <label for="entries" class="text-sm text-neutral-500 font-light mb-2 block">Entries
                                                                     per page</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="entries" id="entries">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="entries" id="entries">
                                                                     <option value="10">10 Entries</option>
                                                                 </select>
                                                             </div>
@@ -829,20 +837,20 @@
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="d-flex justify-content-end table-pagination">
+                                                    <div class="flex justify-end table-pagination">
                                                         <nav aria-label="Page navigation example">
-                                                            <ul class="pagination">
+                                                            <ul class="mt-2 bg-indigo-200 flex">
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true" class="text-black">&laquo;</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item active"><a class="bg-blue-800 text-white py-2 px-4 text-base" href="#">1</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">2</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">3</a></li>
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Next">
-                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true" class="text-black">&raquo;</span>
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -850,7 +858,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="py-4" id="chargeback" role="tabpanel" aria-labelledby="chargeback-tab">
+                                            <div class="py-4 hidden" id="chargeback" role="tabpanel">
                                                 <div>
                                                     <h6 class="font-medium text-black text-base">ChargeBacks</h6>
                                                     <div class="flex justify-between w-full">
@@ -874,7 +882,9 @@
                                                         <div class="my-4 w-[22%]">
                                                             <div class="pr-1">
                                                                 <label for="offerwall" class="text-sm text-neutral-500 font-light mb-2 block">Offerwall</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="offerwall" id="offerwall">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="offerwall" id="offerwall">
                                                                     <option value="">Show All</option>
                                                                 </select>
                                                             </div>
@@ -883,7 +893,9 @@
                                                             <div class="pr-1">
                                                                 <label for="entries" class="text-sm text-neutral-500 font-light mb-2 block">Entries
                                                                     per page</label>
-                                                                <select class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all" name="entries" id="entries">
+                                                                <select
+                                                                    class="block w-full py-1 px-2 font-light text-sm text-zinc-900 bg-indigo-200 border border-neutral-300 rounded outline-none focus:border-blue-400 transition-all"
+                                                                    name="entries" id="entries">
                                                                     <option value="10">10 Entries</option>
                                                                 </select>
                                                             </div>
@@ -901,38 +913,38 @@
                                                         <table class="w-full">
                                                             <thead class="align-bottom border-b-2 border-neutral-200 w-full">
                                                                 <tr>
-                                                                    <td class="">Name</td>
-                                                                    <td class="">Coins</td>
-                                                                    <td class="">Bonus</td>
-                                                                    <td class="">Wall</td>
-                                                                    <td class="">Date</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Name</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Coins</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Bonus</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Wall</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Date</td>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td class="">Daily Bonus</td>
-                                                                    <td class="">1- Coins</td>
-                                                                    <td class="">-</td>
-                                                                    <td class="">Lorem ipsum</td>
-                                                                    <td class="">a day ago</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Daily Bonus</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">1- Coins</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">-</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Lorem ipsum</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">a day ago</td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="d-flex justify-content-end table-pagination">
+                                                    <div class="flex justify-end table-pagination">
                                                         <nav aria-label="Page navigation example">
-                                                            <ul class="pagination">
+                                                            <ul class="mt-2 bg-indigo-200 flex">
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true" class="text-black">&laquo;</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item active"><a class="bg-blue-800 text-white py-2 px-4 text-base" href="#">1</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">2</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">3</a></li>
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Next">
-                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true" class="text-black">&raquo;</span>
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -944,57 +956,57 @@
                                     </div>
                                 </div>
                                 <!-- withdrawl tab -->
-                                <div class="hidden py-4" id="withdraw" role="TabContent" aria-labelledby="withdrawl-tab">
+                                <div class="hidden py-4" id="withdraw" role="TabContent">
                                     <div class="w-full flex flex-wrap bg-white mb-6">
                                         <ul class="w-full flex justify-between mb-6" id="myWithdrawTab" role="tablist">
                                             <li class="w-1/3" role="presentation">
-                                                <button class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-blue-800  border-blue-800">withdrawls</button>
+                                                <button onclick="accordionToggle(this, withdrawls)" role="heading2" class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-blue-800  border-blue-800">withdrawls</button>
                                             </li>
                                             <li class="w-1/3" role="presentation">
-                                                <button class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-neutral-200">pending</button>
+                                                <button onclick="accordionToggle(this, pending)" role="heading2" class="py-3 text-center border-b-2 rounded-none w-full uppercase tracking-wide text-neutral-500  border-transparent">pending</button>
                                             </li>
                                         </ul>
-                                        <div class="w-full bg-white px-2" id="myWithdrawTabContent">
-                                            <div class="py-4" id="withdrawls" role="tabpanel" aria-labelledby="withdrawls-tab">
+                                        <div class="w-full bg-white px-2 block">
+                                            <div class="py-4" id="withdrawls" role="tabpanel2">
                                                 <div>
-                                                    <h6 class="m-0 mb-3 text-dark" style="font-family: med;">Withdrawls
+                                                    <h6 class="font-medium text-black text-base">Withdrawls
                                                     </h6>
                                                     <div class="overflow-x-auto">
                                                         <table class="w-full">
                                                             <thead class="align-bottom border-b-2 border-neutral-200 w-full">
                                                                 <tr>
-                                                                    <td class="">Date</td>
-                                                                    <td class="">Method</td>
-                                                                    <td class="">Amount</td>
-                                                                    <td class="">Invoice</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Date</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Method</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Amount</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Invoice</td>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td class="">01-05-2022</td>
-                                                                    <td class="">Lorem ipsum</td>
-                                                                    <td class="">Lorem ipsum</td>
-                                                                    <td class="">
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">01-05-2022</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Lorem ipsum</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Lorem ipsum</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">
                                                                         <a class="btn btn-sm btn-primary"><i class="fal fa-arrow-alt-to-bottom me-2 text-white"></i>Download</a>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="d-flex justify-content-end table-pagination">
+                                                    <div class="flex justify-end table-pagination">
                                                         <nav aria-label="Page navigation example">
-                                                            <ul class="pagination">
+                                                            <ul class="mt-2 bg-indigo-200 flex">
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true" class="text-black">&laquo;</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item active"><a class="bg-blue-800 text-white py-2 px-4 text-base" href="#">1</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">2</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">3</a></li>
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Next">
-                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true" class="text-black">&raquo;</span>
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -1002,46 +1014,46 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="py-4" id="pending" role="tabpanel" aria-labelledby="pending-tab">
+                                            <div class="hidden py-4" id="pending" role="tabpanel2">
                                                 <div>
-                                                    <h6 class="m-0 text-dark mb-3" style="font-family: med;">Pending
+                                                    <h6 class="font-medium text-black text-base">Pending
                                                         Withdrawls</h6>
                                                     <div class="overflow-x-auto">
                                                         <table class="w-full">
                                                             <thead class="align-bottom border-b-2 border-neutral-200 w-full">
                                                                 <tr>
-                                                                    <td class="">Date</td>
-                                                                    <td class="">Method</td>
-                                                                    <td class="">Amount</td>
-                                                                    <td class="">Action</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Date</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Method</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Amount</td>
+                                                                    <td class="font-medium align-middle p-2 text-black">Action</td>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
                                                                 <tr>
-                                                                    <td class="">01-05-2022</td>
-                                                                    <td class="">Lorem ipsum</td>
-                                                                    <td class="">Lorem ipsum</td>
-                                                                    <td class="">
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">01-05-2022</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Lorem ipsum</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">Lorem ipsum</td>
+                                                                    <td class="font-medium align-middle p-2 text-neutral-500">
                                                                         <a class="btn btn-sm btn-delete"><i class="fal fa-times-circle me-2 text-white"></i>Cancel</a>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
                                                     </div>
-                                                    <div class="d-flex justify-content-end table-pagination">
+                                                    <div class="flex justify-end table-pagination">
                                                         <nav aria-label="Page navigation example">
-                                                            <ul class="pagination">
+                                                            <ul class="mt-2 bg-indigo-200 flex">
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Previous">
-                                                                        <span aria-hidden="true">&laquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Previous">
+                                                                        <span aria-hidden="true" class="text-black">&laquo;</span>
                                                                     </a>
                                                                 </li>
-                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item active"><a class="bg-blue-800 text-white py-2 px-4 text-base" href="#">1</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">2</a></li>
+                                                                <li class="page-item"><a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#">3</a></li>
                                                                 <li class="page-item">
-                                                                    <a class="page-link" href="#" aria-label="Next">
-                                                                        <span aria-hidden="true">&raquo;</span>
+                                                                    <a class="bg-indigo-200 text-blue-800 py-2 px-4 text-base" href="#" aria-label="Next">
+                                                                        <span aria-hidden="true" class="text-black">&raquo;</span>
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -1053,155 +1065,154 @@
                                     </div>
                                 </div>
                                 <!-- referral tab -->
-                                <div class="hidden py-4" id="referrals" role="TabContent" aria-labelledby="referrals-tab">
+                                <div class="hidden py-4" id="referrals" role="TabContent">
                                     <div>
-                                        <div class="card round bg-white p-3 mb-3">
-                                            <h6 class="m-0 my-3 text-dark text-center" style="font-family: med;">Refer &
+                                        <div class="rounded-xl bg-white p-4 mb-4">
+                                            <h6 class="my-4 text-black font-medium text-center text-base">Refer &
                                                 Earn</h6>
-                                            <p class="m-0 round text-center" style="font-family: light; font-size: 14px;">
+                                            <p class="rounded-xl text-center text-sm font-light">
                                                 Earn unlimited rewards by referring your friends, family and followers.
                                                 You'll earn 10% of the confirmed payouts from your referred members.
                                                 Keep referring more friends and watch your earnings grow up!
                                             </p>
-                                            <div class="p-3 my-3 round d-flex justify-content-between align-items-center"
-                                                style="background-color: var(--light-blue);font-family: regular; font-size: 14px;">
+                                            <div class="p-4 my-4 rounded-xl flex justify-between items-center bg-indigo-200 text-sm"">
                                                 <div>
-                                                    <span style="color: var(--grey);">
+                                                    <span class="text-neutral-500">
                                                         https://monetars.com/refer/?refer=EYOPBR
                                                     </span>
                                                 </div>
                                                 <div>
-                                                    <i class="fal fa-clone" style="color: var(--grey); font-size: 18px;"></i>
+                                                    <i class="fal fa-clone text-lg text-neutral-500"></i>
                                                 </div>
                                             </div>
-                                            <p class="m-0 round text-center" style="font-family: light; font-size: 14px;">
+                                            <p class="font-light text-sm rounded-xl text-center">
                                                 Share above Referral link or Unique Referral Code to your Friends &
                                                 Family.
                                             </p>
-                                            <div class="text-center my-3">
-                                                <a href="#" class="btn me-3 text-white" style="background-color:  #3b5998">
+                                            <div class="text-center my-4">
+                                                <a href="#" class="rounded-md text-base py-2 px-4 mr-4 text-white" style="background-color:  #3b5998">
                                                     <i class="fab fa-facebook p-1 text-white"></i>
                                                     <span class="p-1"><b>SHARE</b></span>
                                                 </a>
-                                                <a href="#" class="btn text-white" style="background-color: #00acee;">
+                                                <a href="#" class="rounded-md text-base py-2 px-4 text-white" style="background-color: #00acee;">
                                                     <i class="fab fa-twitter p-1 text-white"></i>
                                                     <span class="p-1"><b>SHARE</b></span>
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="card bg-transparent border-0 py-4 ps-4 pe-2">
-                                            <div class="d-flex justify-content-between align-items-center" style="color: var(--grey);font-family: med;">
+                                        <div class="bg-transparent py-6 pl-6 pr-2">
+                                            <div class="flex justify-between items-center text-neutral-500 font-medium">
                                                 <span>Username</span>
-                                                <span class="ms-5">Registered</span>
+                                                <span class="mr-5">Registered</span>
                                                 <span>Earnings</span>
                                             </div>
                                         </div>
 
-                                        <div class="card round border-0 bg-white p-3 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rounded-xl bg-white p-4 mb-4">
+                                            <div class="flex justify-between items-center">
                                                 <div>
-                                                    <div class="d-flex justify-content-start align-items-center">
+                                                    <div class="flex justify-start items-center">
                                                         <div>
-                                                            <span class="me-3">
+                                                            <span class="m-4">
                                                                 <a href="#user-modal" data-bs-toggle="modal">
-                                                                    <img src="assets/img/Ellipse 54.png" width="45px" height="45px" class="rounded-circle"
-                                                                        style="object-fit: cover; object-position: top;">
+                                                                    <img src="assets/img/Ellipse 54.png" class="rounded-full"
+                                                                        style="object-fit: cover; object-position: top; width: 45px; hight: 45px">
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div>
-                                                            <h6 style="font-family: med;">
-                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-decoration-none text-dark">Registered</a>
+                                                            <h6 class="font-medium">
+                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-black">Registered</a>
                                                             </h6>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                    <span class="mr-2 font-medium">29-06-2022</span>
                                                 </div>
                                                 <div>
-                                                    <span style="font-family: light;">$0.00</span>
+                                                    <span class="font-light">$0.00</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card round border-0 bg-white p-3 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rounded-xl bg-white p-4 mb-4">
+                                            <div class="flex justify-between items-center">
                                                 <div>
-                                                    <div class="d-flex justify-content-start align-items-center">
+                                                    <div class="flex justify-start items-center">
                                                         <div>
-                                                            <span class="me-3">
+                                                            <span class="m-4">
                                                                 <a href="#user-modal" data-bs-toggle="modal">
-                                                                    <img src="assets/img/Ellipse 54.png" width="45px" height="45px" class="rounded-circle"
-                                                                        style="object-fit: cover; object-position: top;">
+                                                                    <img src="assets/img/Ellipse 54.png" class="rounded-full"
+                                                                        style="object-fit: cover; object-position: top; width: 45px; hight: 45px">
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div>
-                                                            <h6 style="font-family: med;">
-                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-decoration-none text-dark">Registered</a>
+                                                            <h6 class="font-medium">
+                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-black">Registered</a>
                                                             </h6>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                    <span class="mr-2 font-medium">29-06-2022</span>
                                                 </div>
                                                 <div>
-                                                    <span style="font-family: light;">$0.00</span>
+                                                    <span class="font-light">$0.00</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card round border-0 bg-white p-3 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rounded-xl bg-white p-4 mb-4">
+                                            <div class="flex justify-between items-center">
                                                 <div>
-                                                    <div class="d-flex justify-content-start align-items-center">
+                                                    <div class="flex justify-start items-center">
                                                         <div>
-                                                            <span class="me-3">
+                                                            <span class="m-4">
                                                                 <a href="#user-modal" data-bs-toggle="modal">
-                                                                    <img src="assets/img/Ellipse 54.png" width="45px" height="45px" class="rounded-circle"
-                                                                        style="object-fit: cover; object-position: top;">
+                                                                    <img src="assets/img/Ellipse 54.png" class="rounded-full"
+                                                                        style="object-fit: cover; object-position: top; width: 45px; hight: 45px">
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div>
-                                                            <h6 style="font-family: med;">
-                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-decoration-none text-dark">Registered</a>
+                                                            <h6 class="font-medium">
+                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-black">Registered</a>
                                                             </h6>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                    <span class="mr-2 font-medium">29-06-2022</span>
                                                 </div>
                                                 <div>
-                                                    <span style="font-family: light;">$0.00</span>
+                                                    <span class="font-light">$0.00</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card round border-0 bg-white p-3 mb-3">
-                                            <div class="d-flex justify-content-between align-items-center">
+                                        <div class="rounded-xl bg-white p-4 mb-4">
+                                            <div class="flex justify-between items-center">
                                                 <div>
-                                                    <div class="d-flex justify-content-start align-items-center">
+                                                    <div class="flex justify-start items-center">
                                                         <div>
-                                                            <span class="me-3">
+                                                            <span class="m-4">
                                                                 <a href="#user-modal" data-bs-toggle="modal">
-                                                                    <img src="assets/img/Ellipse 54.png" width="45px" height="45px" class="rounded-circle"
-                                                                        style="object-fit: cover; object-position: top;">
+                                                                    <img src="assets/img/Ellipse 54.png" class="rounded-full"
+                                                                        style="object-fit: cover; object-position: top; width: 45px; hight: 45px">
                                                                 </a>
                                                             </span>
                                                         </div>
                                                         <div>
-                                                            <h6 style="font-family: med;">
-                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-decoration-none text-dark">Registered</a>
+                                                            <h6 class="font-medium">
+                                                                <a href="#user-modal" data-bs-toggle="modal" class="text-black">Registered</a>
                                                             </h6>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="me-2" style="font-family: med;">29-06-2022</span>
+                                                    <span class="mr-2 font-medium">29-06-2022</span>
                                                 </div>
                                                 <div>
-                                                    <span style="font-family: light;">$0.00</span>
+                                                    <span class="font-light">$0.00</span>
                                                 </div>
                                             </div>
                                         </div>
