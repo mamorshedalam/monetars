@@ -25,15 +25,26 @@ function accordionToggle(btn, id) {
           section.classList.add("hidden");
           section.classList.remove("block");
      }
+
      const buttons = document.querySelectorAll('[role="button"]');
      for (let i = 0; i < buttons.length; i++) {
           const button = buttons[i];
-          button.classList.add("text-neutral-500", "border-transparent");
-          button.classList.remove("text-blue-800", "border-blue-800");
-     }
+          if (button.classList.contains("bg-blue-800")) {
+               
+               button.classList.add("bg-white", "text-black");
+               button.classList.remove("bg-blue-800", "text-white");
 
-     btn.classList.add("text-blue-800", "border-blue-800");
-     btn.classList.remove("text-neutral-500", "border-transparent");
+               btn.classList.remove("bg-white", "text-black");
+               btn.classList.add("bg-blue-800", "text-white");
+          }
+          else {
+               button.classList.add("text-neutral-500", "border-transparent");
+               button.classList.remove("text-blue-800", "border-blue-800");
+
+               btn.classList.add("text-blue-800", "border-blue-800");
+               btn.classList.remove("text-neutral-500", "border-transparent");
+          }
+     }
 
      id.classList.add("block");
      id.classList.remove("hidden");

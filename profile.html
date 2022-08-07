@@ -395,7 +395,8 @@
                     <div class="py-6">
                         <h4 class="font-medium text-2xl">Profile</h4>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg px-4 py-2">
+
+                    <div class="bg-white rounded-xl shadow-lg px-4 my-2">
                         <div class="my-3">
                             <div class="flex flex-col bg-white break-words relative border border-transparent">
                                 <div class="flex flex-wrap">
@@ -438,45 +439,33 @@
                         </div>
                     </div>
 
-
-                    <div class="py-3">
+                    <div class="py-4">
                         <div class="py-4 profile-tabs">
                             <ul class="flex flex-wrap justify-between w-full border-0 mb-6 bg-white" id="myTab"
                                 role="tablist">
-                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4">
                                     <button
-                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all"
-                                        id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
-                                        role="tab" aria-controls="general" aria-selected="true">General</button>
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md bg-blue-800 text-white hover:bg-blue-900 transition-all" role="button" onclick="accordionToggle(this, general)">General</button>
                                 </li>
-                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4">
                                     <button
-                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
-                                        id="earnings-tab" data-bs-toggle="tab" data-bs-target="#earnings" type="button"
-                                        role="tab" aria-controls="earnings" aria-selected="false">Earnings</button>
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md" role="button" onclick="accordionToggle(this, earnings)">Earnings</button>
                                 </li>
-                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4">
                                     <button
-                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
-                                        id="withdrawl-tab" data-bs-toggle="tab" data-bs-target="#withdrawl"
-                                        type="button" role="tab" aria-controls="withdrawl"
-                                        aria-selected="false">Withdrawls</button>
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md" role="button" onclick="accordionToggle(this, withdraw)">Withdraw</button>
                                 </li>
-                                <li class="lg:w-1/4 sm:w-2/4 w-2/4" role="presentation">
+                                <li class="lg:w-1/4 sm:w-2/4 w-2/4">
                                     <button
-                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md"
-                                        id="referrals-tab" data-bs-toggle="tab" data-bs-target="#referrals"
-                                        type="button" role="tab" aria-controls="referrals"
-                                        aria-selected="false">Referrals</button>
+                                        class="flex justify-center text-center w-full py-3 tracking-wide font-medium rounded-md" role="button" onclick="accordionToggle(this, referrals)">Referrals</button>
                                 </li>
                             </ul>
-                            <div class="" id="myTabContent">
+                            <div>
                                 <!-- general tab -->
-                                <div class="py-4 block" id="general" role="tabpanel" aria-labelledby="general-tab">
-                                    <div class="flex user-profile">
+                                <div class="py-4 block" id="general" role="TabContent">
+                                    <div class="flex flex-wrap">
                                         <div class="lg:w-1/2 md:w-1/2 w-full my-3 pr-2">
-                                            <div
-                                                class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                            <div class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4 mb-8">
                                                 <h4 class="font-medium text-2xl mb-4">Your Info</h4>
                                                 <form name="user-info">
                                                     <div class="flex flex-wrap">
@@ -545,11 +534,11 @@
                                                 </form>
                                             </div>
 
-                                            <div class="card rounded border-0 p-4 profile-card-2">
-                                                <h4 class="m-0 mb-4">Personal Info</h4>
-                                                <form name="user-profile">
-                                                    <div class="row">
-                                                        <div class="col-md-6 mb-3">
+                                            <div class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                                <h4 class="font-medium text-2xl mb-4">Personal Info</h4>
+                                                <form name="">
+                                                    <div class="flex flex-wrap">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="first_name">First
@@ -559,7 +548,7 @@
                                                                     name="first_name" id="first_name" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="last_name">Last
@@ -569,7 +558,7 @@
                                                                     name="last_name" id="last_name" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="stret">Street &
@@ -579,7 +568,7 @@
                                                                     name="stret" id="stret" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="city">City</label>
@@ -588,7 +577,7 @@
                                                                     name="city" id="city" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="zipcode">Zipcode</label>
@@ -597,7 +586,7 @@
                                                                     name="zipcode" id="zipcode" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="country">Country</label>
@@ -606,7 +595,7 @@
                                                                     name="country" id="country" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="lg:w-1/2 md:w-1/2 w-full mb-4">
                                                             <div class="px-2">
                                                                 <label class="text-sm text-neutral-500"
                                                                     for="email">Email</label>
@@ -615,9 +604,9 @@
                                                                     name="email" id="email" required value="">
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-12 col-lg-12 mb-2">
+                                                        <div class="w-full px-2 mb-2">
                                                             <button type="submit"
-                                                                class="btn btn-sm px-5 btn-primary">Save</button>
+                                                                class="text-white bg-blue-800 hover:bg-blue-900 py-1 px-3">Save</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -625,8 +614,7 @@
                                         </div>
 
                                         <div class="lg:w-1/2 md:w-1/2 w-full my-3 pl-2">
-                                            <div
-                                                class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                            <div class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4 mb-8">
                                                 <h4 class="font-medium text-2xl mb-6">Profile Settings</h4>
                                                 <div>
                                                     <h6 class="mb-2 text-base">Change Display Name</h6>
@@ -718,24 +706,23 @@
                                                 </div>
                                             </div>
 
-                                            <div class="card rounded border-0 p-4 profile-card-2">
-                                                <h4 class="m-0 mb-4">Account Settings</h4>
+                                            <div class="flex flex-col relative bg-white bg-clip-border break-words border rounded-md p-4">
+                                                <h4 class="font-medium text-2xl mb-6">Account Settings</h4>
                                                 <div>
-                                                    <h6>Two-factor authentication</h6>
-                                                    <small>
+                                                    <h6 class="mb-2 text-base">Two-factor authentication</h6>
+                                                    <small class="font-light text-sm block mb-3 tracking-wide">
                                                         You've deactivated two-factor authentication. We strongly
                                                         recommend to activate on your account.
                                                     </small>
                                                     <div class="btn-box mb-3">
                                                         <button
-                                                            class="btn btn-primary btn-sm d-block w-100">Activate</button>
+                                                            class="text-white bg-blue-800 hover:bg-blue-900 py-1 px-3">Activate</button>
                                                     </div>
                                                     <h6 class="mt-1 mb-2">Change Password</h6>
                                                     <form>
-                                                        <div class="mb-1 row">
-                                                            <div class="lg:w-1/2 md:w-1/2 w-full">
-                                                                <label for="pass" class="text-sm text-neutral-500 px-1"
-                                                                    style="font-size: 12px; font-family: light;">Current
+                                                        <div class="mb-1 flex flex-wrap">
+                                                            <div class="lg:w-1/2 md:w-1/2 w-full md:pr-2">
+                                                                <label for="pass" class="text-sm text-neutral-500 font-light px-1">Current
                                                                     Password</label>
                                                                 <input type="password"
                                                                     class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm w-100"
@@ -743,10 +730,9 @@
                                                                     style="background-color: var(--light-blue);">
 
                                                             </div>
-                                                            <div class="lg:w-1/2 md:w-1/2 w-full">
+                                                            <div class="lg:w-1/2 md:w-1/2 w-full md:pl-2">
                                                                 <label for="c_pass"
-                                                                    class="text-sm text-neutral-500 px-1"
-                                                                    style="font-size: 12px; font-family: light;">New
+                                                                class="text-sm text-neutral-500 font-light px-1">New
                                                                     Password</label>
                                                                 <input type="password"
                                                                     class="block w-full py-2 px-3 font-light text-sm text-zinc-900 bg-indigo-200 bg-clip-padding border border-neutral-300 rounded-md outline-none focus:border-blue-400 transition-all-sm w-100"
@@ -754,17 +740,17 @@
                                                                     style="background-color: var(--light-blue);">
                                                             </div>
                                                         </div>
-                                                        <div class="btn-box mt-3">
-                                                            <button class="btn btn-primary btn-sm d-block w-100"
+                                                        <div class="btn-box mt-4">
+                                                            <button class="text-white bg-blue-800 hover:bg-blue-900 py-1 px-3"
                                                                 type="submit">Change Password</button>
                                                         </div>
                                                     </form>
 
-                                                    <h6 class="mt-3 mb-2">Delete Account</h6>
+                                                    <h6 class="mt-4 mb-2">Delete Account</h6>
                                                     <small style="font-size: 12px;">Once you delete your account, there
                                                         is no going back. Please be certain.</small>
-                                                    <div class="btn-box mt-3">
-                                                        <button class="btn btn-delete btn-sm d-block w-100">Delete
+                                                    <div class="btn-box mt-4">
+                                                        <button class="text-white bg-red-800 hover:bg-red-900 py-1 px-3">Delete
                                                             Account</button>
                                                     </div>
                                                 </div>
@@ -773,7 +759,7 @@
                                     </div>
                                 </div>
                                 <!-- earning tab -->
-                                <div class="tab-pane py-3 fade" id="earnings" role="tabpanel"
+                                <div class="hidden py-4" id="earnings" role="TabContent"
                                     aria-labelledby="earnings-tab">
                                     <div class="row earning-tab bg-white m-0">
                                         <ul class="nav nav-tabs mb-4" id="myWithdrawlTab" role="tablist">
@@ -1117,7 +1103,7 @@
                                     </div>
                                 </div>
                                 <!-- withdrawl tab -->
-                                <div class="tab-pane py-3 fade" id="withdrawl" role="tabpanel"
+                                <div class="hidden py-4" id="withdraw" role="TabContent"
                                     aria-labelledby="withdrawl-tab">
                                     <div class="row earning-tab withdrawls-tab bg-white m-0">
                                         <ul class="nav nav-tabs mb-4" id="myWithdrawTab" role="tablist">
@@ -1241,7 +1227,7 @@
                                     </div>
                                 </div>
                                 <!-- referral tab -->
-                                <div class="tab-pane py-3 fade" id="referrals" role="tabpanel"
+                                <div class="hidden py-4" id="referrals" role="TabContent"
                                     aria-labelledby="referrals-tab">
                                     <div>
                                         <div class="card round bg-white p-3 mb-3">
@@ -2197,8 +2183,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/10.0.0/highcharts.js"
         integrity="sha512-//WD7Gq/302cFYMIeO2Y8ZCkrYDs/yOpZvSBjhc4QXeLuBChYmBDQg7ydKQLNAmJiuPZgccT85ZlL9s/ZghLBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="src/js/main.js"></script>
-    <script src="src/js/app.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
