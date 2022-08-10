@@ -55,7 +55,7 @@
                               </a>
                          </li>
                          <li class="nav-item">
-                              <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
+                              <a onclick="blockToggle(promoModal)" class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
                                    <i class="fal fa-gift px-2"></i>Promo
                               </a>
                          </li>
@@ -127,7 +127,7 @@
                <div>
                     <div class="my-1">
                          <div class="relative">
-                              <button onclick="displayToggle(dropdownMenu4)" class="flex justify-start items-center p-1 text-sm bg-indigo-200">
+                              <button onclick="blockToggle(dropdownMenu4)" class="flex justify-start items-center p-1 text-sm bg-indigo-200">
                                    <div>
                                         <span style="border-radius: 3px; background-color: white; padding: 12px 14px;">D</span>
                                    </div>
@@ -141,8 +141,8 @@
                                         </div>
                                    </div>
                               </button>
-                              <ul id="dropdownMenu4" style="display: none" class="shadow-md"
-                                   style="min-width: 120px !important; position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0.400009px, 54px, 0px);">
+                              <ul id="dropdownMenu4" class="absolute shadow-md z-[9999999]"
+                                   style="min-width: 120px !important; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0.400009px, 54px, 0px);">
                                    <li class="block w-full py-1 px-4 clear-both whitespace-nowrap text-sm text-neutral-500">
                                         <div class="h-6 mb-1 text-sm text-neutral-500">
                                              <input class="form-check-input" type="checkbox" onchange="getBalance(this)" value="1" role="switch" id="flexSwitchCheckDefault">
@@ -929,7 +929,7 @@
                               </a>
                          </li>
                          <li class="nav-item">
-                              <a class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
+                              <a onclick="blockToggle(promoModal)" class="block py-2 px-3 text-neutral-500 hover:text-blue-800" href="javascript:void(0);">
                                    <i class="fal fa-gift px-2"></i>Promo
                               </a>
                          </li>
